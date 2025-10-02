@@ -118,11 +118,7 @@ function TestimonialCard({
       {...props}
       className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
     >
-      <img
-        alt=""
-        src={img}
-        className="absolute inset-x-0 top-0 aspect-square w-full object-cover"
-      />
+      <div className="absolute inset-x-0 top-0 aspect-square w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500" />
       <div
         aria-hidden="true"
         className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-25%"
@@ -160,10 +156,11 @@ function CallToAction() {
         </p>
       <div className="mt-2">
         <Link
-          href="#contact"
+          href="https://cal.com/dani-kellogg/30min"
+          target="_blank"
           className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
         >
-          Let's Talk
+          Let's Chat
           <ArrowLongRightIcon className="size-5" />
         </Link>
       </div>
@@ -191,9 +188,9 @@ export function Testimonials() {
     <div className="overflow-hidden py-32">
       <Container>
         <div ref={setReferenceWindowRef}>
-        <Subheading>What people are saying</Subheading>
+        <Subheading>Testimonials</Subheading>
         <Heading as="h3" className="mt-2">
-          Nice things people have said about working with me.
+          What clients say about working with me.
         </Heading>
         </div>
       </Container>

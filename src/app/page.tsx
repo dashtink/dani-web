@@ -29,21 +29,19 @@ function Hero() {
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 className="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">
-                Hi, I'm Dani, I tell product stories that resonate.
+              <h1 className="text-5xl font-regular tracking-tight text-pretty text-gray-900 sm:text-7xl">
+                <span className='font-bold'>Hi, I'm Dani.</span> Tech Marketer, Product Storyteller, Serial Hobby Dabbler.
               </h1>
               <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
                 I help AI/ML, data infrastructure, and developer tool companies translate their complex products into stories that actually resonate with buyers—without losing what makes them interesting.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
-                  href="#case-studies"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  href="https://cal.com/dani-kellogg/30min"
+                  target="_blank"
+                  className="rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
                 >
-                  View Case Studies
-                </a>
-                <a href="/pricing" className="text-sm/6 font-semibold text-gray-900">
-                  What I Offer <span aria-hidden="true">→</span>
+                  Let's Chat
                 </a>
               </div>
             </div>
@@ -52,7 +50,7 @@ function Hero() {
                 <div className="relative">
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    src="/dani-3.png"
                     className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -62,7 +60,7 @@ function Hero() {
                 <div className="relative">
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    src="/dani-2.png"
                     className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -70,7 +68,7 @@ function Hero() {
                 <div className="relative">
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                    src="/dani-4.png"
                     className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -80,7 +78,7 @@ function Hero() {
                 <div className="relative">
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+                    src="https://images.unsplash.com/photo-1613525850352-52de526e2336?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHNlYXR0bGV8ZW58MHx8MHx8fDA%3D"
                     className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -88,7 +86,7 @@ function Hero() {
                 <div className="relative">
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    src="/dani-1.png"
                     className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -107,10 +105,10 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-24">
         <Heading as="h2" className="max-w-3xl">
-          What I Actually Do
+          Your Product
         </Heading>
         <p className="mt-6 max-w-3xl text-lg/7 text-gray-600">
-          I'm not your typical marketing consultant. I've been lucky enough to be early at companies that got acquired (Knack, Mode Analytics, CastorDoc), which means I learned everything by doing it—from building our first sales deck to figuring out how to talk about a no-code platform when "no-code" wasn't even a category yet.
+          When you hire me, you're not getting a contractor for random projects. You're getting a productized marketing function with known outcomes. I build marketing from zero to scale at technical B2B SaaS companies. I come in early—often as the first marketing hire or first PMM—establish the foundational frameworks for positioning, messaging, and GTM, and get companies ready to scale.
         </p>
         <Screenshot
           width={1216}
@@ -126,36 +124,36 @@ function FeatureSection() {
 function BentoSection() {
   return (
     <Container>
-      <Subheading>Why I'm Different</Subheading>
+      <Subheading>Core Capabilities</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        I Actually Understand Your Product
+        Builder with Zero-to-Scale Experience
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
           eyebrow="Experience"
-          title="I've Been There"
-          description="I joined Knack as employee #3 and helped scale from 5 to 35 people. I've been early at companies that got acquired (Knack, Mode Analytics, CastorDoc), so I know what it's like to build marketing from nothing."
+          title="Zero-to-Scale Builder"
+          description="I've built marketing functions from scratch at multiple companies, including two that were acquired shortly after I joined. I joined Knack as employee #3 and helped scale from 5 to 35 people. I know how to operate when there's no playbook, no budget, and no existing infrastructure."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat" />
+            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-center" />
           }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
         <BentoCard
           eyebrow="Technical"
-          title="I Actually Get It"
-          description="I've built apps using Next.js, worked with Docker containers, and understand compliance requirements like PII and HIPAA. I'm not just reading from a script—I genuinely understand how your product works."
+          title="Constantly Curious & Technically Credible"
+          description="I understand complex technical products because I've taken the time to actually learn how they work. I've built apps using Next.js, worked with Docker containers, and understand compliance requirements like PII and HIPAA. I genuinely love getting into the weeds."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-size-[1100px_650px] bg-position-[left_-38px_top_-73px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-left" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
         <BentoCard
           eyebrow="Results"
-          title="I Get My Hands Dirty"
-          description="I'm not just a strategist—I actually build things. I've doubled pipeline growth, improved sales conversion rates, and created sales materials that teams actually use. I love getting into the weeds."
+          title="Hands-On Leader Who Drives Results"
+          description="I'm not just a strategist—I'm someone who gets into the weeds and drives actual results. I've doubled pipeline growth, improved sales conversion rates, reduced marketing spend while maintaining impact, and created sales enablement materials that teams actually use."
           graphic={
             <div className="flex size-full pt-10 pl-10">
               <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
@@ -165,15 +163,15 @@ function BentoSection() {
         />
         <BentoCard
           eyebrow="AI-Augmented"
-          title="I Love New Tools"
-          description="I'm constantly experimenting with new approaches—building apps I wish existed, running a home server, or architecting AI workflows that cut content creation time by hours. I believe in being AI-augmented, not AI-replaced."
+          title="AI-Augmented, Human-Driven"
+          description="I use AI tools to work more efficiently and experiment with new approaches, but I never lose sight of the human judgment that makes marketing effective. I'm constantly curious about how things work and genuinely enjoy diving deep into technical details."
           graphic={<LogoCluster />}
           className="lg:col-span-2"
         />
         <BentoCard
           eyebrow="Impact"
-          title="I Care About Results"
-          description="I track what matters (pipeline, conversion rates, sales cycle length), iterate based on data, and build frameworks that scale without creating unnecessary process. I want to see the impact of my work."
+          title="Measurable Impact & Sustainable Growth"
+          description="I track what matters (pipeline, conversion rates, sales cycle length), iterate based on data, and build frameworks that scale without creating unnecessary process. I care about sustainability and building things that last, not just chasing growth at all costs."
           graphic={<Map />}
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
@@ -242,14 +240,14 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <Container className="mt-10">
+        <Container className="mt-24">
           <LogoCloud />
         </Container>
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
           <FeatureSection />
           <BentoSection />
         </div>
-        <DarkBentoSection />
+        {/* <DarkBentoSection /> */}
       </main>
       <Testimonials />
       <Footer />

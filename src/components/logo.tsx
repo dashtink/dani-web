@@ -8,7 +8,7 @@ export function Logo({ className }: { className?: string }) {
     <img
       src="/logo.svg"
       alt="Dani Kellogg"
-      className={clsx(className, 'h-9')}
+      className={clsx(className, 'h-14')}
     />
   )
 }

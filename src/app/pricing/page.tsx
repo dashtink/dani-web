@@ -151,7 +151,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
             </div>
           </div>
           <div className="mt-8">
-            <Button href={tier.href}>Let's Talk</Button>
+            <Button href="https://cal.com/dani-kellogg/30min" target="_blank">Let's Chat</Button>
           </div>
           <div className="mt-8">
             <h3 className="text-sm/6 font-medium text-gray-950">

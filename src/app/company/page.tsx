@@ -136,8 +136,8 @@ function Team() {
             I'm technical enough to hold my own in product and engineering conversations—I've built apps I wish I had for myself using Next.js, understand backend architecture, and can talk about Docker containers without sounding like I'm reading from a script. With tools like Cursor, I'm graduating from vibe coder to real coder, which gives me genuine credibility when talking about technical products.
           </p>
           <div className="mt-6">
-            <Button className="w-full sm:w-auto" href="#contact">
-              Let's Talk
+            <Button className="w-full sm:w-auto" href="https://cal.com/dani-kellogg/30min" target="_blank">
+              Let's Chat
             </Button>
           </div>
         </div>
@@ -266,7 +266,7 @@ function Testimonial() {
 function Careers() {
   return (
     <Container className="my-32">
-      <Subheading>Let's Talk</Subheading>
+      <Subheading>Let's Chat</Subheading>
       <Heading as="h3" className="mt-2">
         Ready to build something together?
       </Heading>
