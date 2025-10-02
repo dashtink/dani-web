@@ -30,10 +30,10 @@ function Hero() {
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
               <h1 className="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">
-                I Help Technical Companies Find Their Voice
+                Hi, I'm Dani, I tell product stories that resonate.
               </h1>
               <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                I'm Dani, a product marketing leader who's been lucky enough to work with some incredible technical teams. I help AI/ML, data infrastructure, and developer tool companies translate their complex products into stories that actually resonate with buyers—without losing what makes them interesting.
+                I help AI/ML, data infrastructure, and developer tool companies translate their complex products into stories that actually resonate with buyers—without losing what makes them interesting.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
