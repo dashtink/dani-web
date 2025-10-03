@@ -19,46 +19,54 @@ import { Heading, Subheading } from './text'
 
 const testimonials = [
   {
-    img: '/testimonials/tina-yards.jpg',
-    name: 'Stephen Spellicy',
-    title: 'COO, Wallaroo.AI',
+    name: 'Xavier de Boisredon',
+    title: 'Co-Founder & COO at CastorDoc (now Catalog by Coalesce)',
     quote:
-      'Partnering with Dani Kellogg was a game-changer. She expertly rebooted our marketing, branding, and positioned Wallaroo.AI as a leader in the AI software market. Her strategic insight and execution made a remarkable impact on our growth and market presence.',
+      'Dani is smart, professional & dedicated. Whether presenting to stakeholders, conducting customer interviews, or crafting marketing materials, Dani\'s communication skills are impeccable. Dani is a versatile marketer and adapts really well to any challenge she has to overcome.',
   },
   {
-    img: '/testimonials/conor-neville.jpg',
-    name: 'Joerg Koehler',
-    title: 'VP Marketing, LeadIQ',
-    quote:
-      'Dani Kellogg transformed our product marketing at LeadIQ and rebooted the motion from the ground up. As our fractional Head of PMM, she not only revamped our GTM strategy and positioning but also rebuilt crucial bridges across teams.',
-  },
-  {
-    img: '/testimonials/amy-chase.jpg',
-    name: 'Marcela Heywood',
-    title: 'Head of Marketing, CastorDoc',
-    quote:
-      'Dani was a stellar addition to my team at CastorDoc. She was our first product marketer and settled into a very challenging role quickly. She established rhythms and processes with the product team across a 9hr time difference.',
-  },
-  {
-    img: '/testimonials/veronica-winton.jpg',
     name: 'Katie Paxson Flynn',
-    title: 'Director of Product Marketing, Thoughtspot',
+    title: 'Director of Product Marketing, Thoughtspot (formerly Mode)',
     quote:
       'Dani was one of the first people I hired when building out the product marketing team at Mode. Her strong background in product and product education combined with her project management and organizational skills made her a fantastic asset.',
   },
   {
-    img: '/testimonials/dillon-lenora.jpg',
+    name: 'Samantha Ferguson',
+    title: 'Staff Product Designer @ dbt Labs (formerly Mode)',
+    quote:
+      'From synthesis of initial customer feedback to the iterative improvements on Alpha and Beta programs, Dani consistently found ways to enhance our internal operations, keep us customer-focused, and maintain forward momentum. Her diverse skills make her a tremendous asset to any organization.',
+  },
+  {
     name: 'Tristan Mayer',
-    title: 'Co-Founder & CEO at CastorDoc',
+    title: 'Co-Founder & CEO at CastorDoc (now Catalog by Coalesce)',
     quote: 'Dani has been amazing to work with. She has been a great pedagogue when it comes to explaining the complexity of the data ecosystem to our clients, prospects and partners. She is a very talented and reliable builder.',
   },
   {
-    img: '/testimonials/harriet-arron.jpg',
     name: 'Nic Galluzzo',
-    title: 'Co-Founder @ ProductColab',
+    title: 'Co-Founder @ ProductColab (formerly Knack & Mode)',
     quote:
       'Dani is an exemplary human being. We worked together for over 7 years in 2 different companies, and in both roles they always brought a charismatic and creative perspective to any conversation. Dani is also a builder by heart.',
   },
+  {
+    name: 'Jessica Schimm',
+    title: 'Content Team Lead at Hex (formerly Mode)',
+    quote:
+      'Dani was a pleasure to work with. She came prepared to every meeting, kept large groups focused on the goals at hand, and always brought a product marketing lens to the table. She understood the data science audience well and was a total team player, who always brought good energy in Mode\'s fast-paced environment.',
+  },
+  {
+    name: 'Brooks Chambers',
+    title: 'Brand leader and Creative Director (formerly Mode)',
+    quote:
+      'Dani is an extremely talented marketer who can handle anything you throw at them. They\'re thoughtful in their approach and do a great job of bringing even the most granular product details to bear on the broader story you\'re trying to tell in market. I\'d jump at the chance to work with them again!',
+  },
+
+  {
+    name: 'Tim Hinds',
+    title: 'Tech Product Marketing Leader',
+    quote:
+      'Dani\'s an incredibly resourceful and effective product marketer of technical products. Having worked at startups for so long, Dani can actually execute on everything from strategy and research to content and design. Truly a fullstack product marketer.',
+  },
+  
 ]
 
 function TestimonialCard({
@@ -151,19 +159,6 @@ function TestimonialCard({
 function CallToAction() {
   return (
     <div>
-        <p className="max-w-sm text-sm/6 text-gray-600">
-          Ready to work together? Let's talk about how I can help your technical company find its voice and actually connect with the right people.
-        </p>
-      <div className="mt-2">
-        <Link
-          href="https://cal.com/dani-kellogg/30min"
-          target="_blank"
-          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
-        >
-          Let's Chat
-          <ArrowLongRightIcon className="size-5" />
-        </Link>
-      </div>
     </div>
   )
 }
@@ -185,7 +180,7 @@ export function Testimonials() {
   }
 
   return (
-    <div className="overflow-hidden py-32">
+    <div className="overflow-hidden py-32" id="testimonials">
       <Container>
         <div ref={setReferenceWindowRef}>
         <Subheading>Testimonials</Subheading>

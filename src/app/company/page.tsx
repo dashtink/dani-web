@@ -246,7 +246,7 @@ function Testimonial() {
       />
       <figure className="relative p-10">
         <blockquote>
-          <p className="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['"'] after:absolute after:content-['"']">
+          <p className="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['&ldquo;'] after:absolute after:content-['&rdquo;']">
             Dani Kellogg transformed our product marketing at LeadIQ and rebooted the motion from the ground up. Her work created a unified and actionable narrative across our products, significantly improving our market strategy in a crowded space.
           </p>
         </blockquote>

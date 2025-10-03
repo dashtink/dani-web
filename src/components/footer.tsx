@@ -11,26 +11,33 @@ function CallToAction() {
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
         <Subheading>Let's Talk</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to work together?
+        <p className="mt-6 text-3xl font-medium tracking-tight text-black sm:text-5xl">
+          Let's connect
           <br />
-          Let's talk about your marketing challenges.
+          and start a conversation.
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        I help technical companies find their voice and connect with the right people.
+      <p className="mx-auto mt-6 max-w-lg text-sm/6 text-black">
+        I'm exploring senior product marketing and Head of Marketing roles at B2B companies where the product actually matters. Whether you're hiring, want to connect on LinkedIn, or just want to chat about product marketing—I'd love to hear from you.
       </p>
-      <div className="mt-6">
+      <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <Button className="w-full sm:w-auto" href="https://cal.com/dani-kellogg/30min" target="_blank">
           Let's Chat
         </Button>
+        <a
+          href="https://linkedin.com/in/dashkellogg"
+          target="_blank"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-gray-700 transition-colors"
+        >
+          Connect on LinkedIn
+        </a>
       </div>
     </div>
   )
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-950/50">{children}</h3>
+  return <h3 className="text-sm/6 font-medium text-black/50">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -42,7 +49,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-hover:text-gray-950/75"
+        className="font-medium text-black data-hover:text-black/75"
       />
     </li>
   )
@@ -52,19 +59,13 @@ function Sitemap() {
   return (
     <>
       <div>
-        <SitemapHeading>Services</SitemapHeading>
+        <SitemapHeading>Explore</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">What I Offer</SitemapLink>
-          <SitemapLink href="#case-studies">Case Studies</SitemapLink>
-          <SitemapLink href="#contact">Contact</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>About</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/company">About Me</SitemapLink>
-          <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="https://linkedin.com/in/dashkellogg">LinkedIn</SitemapLink>
+          <SitemapLink href="#what-i-do">What I Do</SitemapLink>
+          <SitemapLink href="#what-i-bring">What I Bring</SitemapLink>
+          <SitemapLink href="#selected-work">Selected Work</SitemapLink>
+          <SitemapLink href="#what-i-care-about">What I Care About</SitemapLink>
+          <SitemapLink href="#testimonials">Testimonials</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -72,13 +73,15 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="mailto:dashkellogg@gmail.com">Email</SitemapLink>
           <SitemapLink href="tel:757-803-7897">Phone</SitemapLink>
+          <SitemapLink href="https://linkedin.com/in/dashkellogg">LinkedIn</SitemapLink>
+          <SitemapLink href="https://cal.com/dani-kellogg/30min" target="_blank">Schedule a Call</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Legal</SitemapHeading>
+        <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Privacy Policy</SitemapLink>
-          <SitemapLink href="#">Terms of Service</SitemapLink>
+          <SitemapLink href="https://github.com/dashtink" target="_blank">GitHub</SitemapLink>
+          <SitemapLink href="/pricing">Resume</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -109,7 +112,7 @@ function SocialLinks() {
         href="https://github.com/dashtink"
         target="_blank"
         aria-label="View Dani's GitHub profile"
-        className="text-gray-950 data-hover:text-gray-950/75"
+        className="text-black data-hover:text-black/75"
       >
         <SocialIconGitHub className="size-4" />
       </Link>
@@ -117,7 +120,7 @@ function SocialLinks() {
         href="https://linkedin.com/in/dashkellogg"
         target="_blank"
         aria-label="Connect with Dani on LinkedIn"
-        className="text-gray-950 data-hover:text-gray-950/75"
+        className="text-black data-hover:text-black/75"
       >
         <SocialIconLinkedIn className="size-4" />
       </Link>
@@ -127,7 +130,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-950">
+    <div className="text-sm/6 text-black">
       &copy; {new Date().getFullYear()} Dani Kellogg. All rights reserved.
     </div>
   )
@@ -146,10 +149,15 @@ export function Footer() {
                 <div className="col-span-2 flex">
                   <PlusGridItem className="pt-6 lg:pb-6">
                     <Logo className="h-9" />
+                    <p className="mt-4 max-w-sm text-sm/6 text-black">
+                      I'm based in Seattle with my wife and three kids. I love learning how things work, whether that's Agentic AI, creative writing or sourdough fermentation.
+                    </p>
                   </PlusGridItem>
                 </div>
-                <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  <Sitemap />
+                <div className="col-span-2 flex justify-end lg:col-span-4 lg:pt-6">
+                  <div className="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-3">
+                    <Sitemap />
+                  </div>
                 </div>
               </div>
             </PlusGridRow>
