@@ -65,6 +65,7 @@ function Sitemap() {
           <SitemapLink href="#what-i-bring">What I Bring</SitemapLink>
           <SitemapLink href="#selected-work">Selected Work</SitemapLink>
           <SitemapLink href="#what-i-care-about">What I Care About</SitemapLink>
+          <SitemapLink href="#content-thought-leadership">Content</SitemapLink>
           <SitemapLink href="#testimonials">Testimonials</SitemapLink>
         </SitemapLinks>
       </div>

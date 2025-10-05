@@ -183,9 +183,9 @@ export function Testimonials() {
     <div className="overflow-hidden py-32" id="testimonials">
       <Container>
         <div ref={setReferenceWindowRef}>
-        <Subheading>Testimonials</Subheading>
+        <Subheading>References</Subheading>
         <Heading as="h3" className="mt-2">
-          What clients say about working with me.
+          What people say about working with me.
         </Heading>
         </div>
       </Container>
@@ -198,12 +198,12 @@ export function Testimonials() {
           '[--scroll-padding:max(--spacing(6),calc((100vw-(var(--container-2xl)))/2))] lg:[--scroll-padding:max(--spacing(8),calc((100vw-(var(--container-7xl)))/2))]',
         ])}
       >
-        {testimonials.map(({ img, name, title, quote }, testimonialIndex) => (
+        {testimonials.map(({ name, title, quote }, testimonialIndex) => (
           <TestimonialCard
             key={testimonialIndex}
             name={name}
             title={title}
-            img={img}
+            img=""
             bounds={bounds}
             scrollX={scrollX}
             onClick={() => scrollTo(testimonialIndex)}

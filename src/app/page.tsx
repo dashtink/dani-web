@@ -13,14 +13,15 @@ import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
 import { LogoTimeline } from '@/components/logo-timeline'
 import { Map } from '@/components/map'
+import { ContentAndThoughtLeadership } from '@/components/content-thought-leadership'
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from '@heroicons/react/20/solid'
+  BookOpen,
+  Users,
+  Code,
+  Search,
+  MessageSquare,
+  TrendingUp,
+} from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -335,27 +336,38 @@ function CastorDocExample() {
   )
 }
 
+
 function WhatICareAbout() {
   const features = [
     {
-      name: 'Collaboration over hierarchy',
-      description: 'I want to work with founders and teams who value input from across functions, not people who just want someone to execute their ideas',
-      icon: CloudArrowUpIcon,
+      name: 'Story comes first',
+      description: 'You can build the most sophisticated marketing infrastructure in the world, but if you\'re telling the wrong story, none of it matters. Finding that message that makes someone stop and think "this is exactly what I need"—that\'s the work.',
+      icon: BookOpen,
     },
     {
-      name: 'Building for the long term',
-      description: 'I\'ve seen too many companies chase growth at all costs and burn out their teams. I want to work somewhere sustainable',
-      icon: LockClosedIcon,
+      name: 'Marketing doesn\'t happen in a vacuum',
+      description: 'The best positioning comes from actually understanding what Product is building and why, and from hearing what Sales is experiencing in the field. Cross-functional collaboration isn\'t a nice-to-have, it\'s how good work gets done.',
+      icon: Users,
     },
     {
-      name: 'Products that push things forward',
-      description: 'Not interested in incremental SaaS tools solving problems nobody has',
-      icon: ArrowPathIcon,
+      name: 'Technical credibility earns trust',
+      description: 'Too many product marketers treat "technical" like a foreign language they need translated. If you\'re marketing a technical product, do the work to understand it. You don\'t need to build it, but you should understand it well enough to represent it honestly.',
+      icon: Code,
     },
     {
-      name: 'Environments where I can grow',
-      description: 'Whether that\'s early stage where I\'m building foundations, or growth stage where I\'m scaling what exists and mentoring others',
-      icon: FingerPrintIcon,
+      name: 'Curiosity over assumptions',
+      description: 'The best insights come from constantly asking "how does this actually work?" and "why does this matter?" I stay curious about products, customers, markets, and tools—because the moment you stop asking questions is when your marketing becomes generic.',
+      icon: Search,
+    },
+    {
+      name: 'Clear beats clever',
+      description: 'I\'d rather write something that\'s immediately understandable than something that sounds impressive but says nothing. Good marketing uses plain language to explain complex ideas, not jargon to obscure simple ones.',
+      icon: MessageSquare,
+    },
+    {
+      name: 'Sustainable growth beats hypergrowth',
+      description: 'I\'ve watched companies scale too fast, burn out their teams, and lose what made them interesting. Building for the long term with strong fundamentals matters more than chasing the next funding round.',
+      icon: TrendingUp,
     },
   ]
 
@@ -363,7 +375,7 @@ function WhatICareAbout() {
     <div className="bg-white py-24 sm:py-32" id="what-i-care-about">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-indigo-600">What I care about</h2>
+          <h2 className="text-base/7 font-semibold text-indigo-600">My principles</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
             The values that drive my work
           </p>
@@ -371,7 +383,7 @@ function WhatICareAbout() {
             I'm looking for companies and teams that align with what matters most to me in my career and work.
           </p>
         </div>
-        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-black sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-x-16">
+        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-black sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
           {features.map((feature) => (
             <div key={feature.name} className="relative pl-9">
               <dt className="inline font-semibold text-black">
@@ -403,6 +415,7 @@ export default function Home() {
         <LeadIQExample />
         <CastorDocExample />
         <WhatICareAbout />
+        <ContentAndThoughtLeadership />
       </main>
       <Testimonials />
       <Footer />

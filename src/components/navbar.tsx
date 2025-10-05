@@ -11,13 +11,14 @@ import { Link } from './link'
 import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
-const links = [
-  { href: '#what-i-do', label: 'What I Do' },
-  { href: '#what-i-bring', label: 'What I Bring' },
-  { href: '#selected-work', label: 'Selected Work' },
-  { href: '#what-i-care-about', label: 'What I Care About' },
-  { href: '#testimonials', label: 'Testimonials' },
-]
+  const links = [
+    { href: '#what-i-do', label: 'What I Do' },
+    { href: '#what-i-bring', label: 'What I Bring' },
+    { href: '#selected-work', label: 'Selected Work' },
+    { href: '#what-i-care-about', label: 'What I Care About' },
+    { href: '#content-thought-leadership', label: 'Content' },
+    { href: '#testimonials', label: 'Testimonials' },
+  ]
 
 function DesktopNav() {
   return (
