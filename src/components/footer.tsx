@@ -61,12 +61,11 @@ function Sitemap() {
       <div>
         <SitemapHeading>Explore</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#what-i-do">What I Do</SitemapLink>
           <SitemapLink href="#what-i-bring">What I Bring</SitemapLink>
           <SitemapLink href="#selected-work">Selected Work</SitemapLink>
           <SitemapLink href="#what-i-care-about">What I Care About</SitemapLink>
           <SitemapLink href="#content-thought-leadership">Content</SitemapLink>
-          <SitemapLink href="#testimonials">Testimonials</SitemapLink>
+          <SitemapLink href="#testimonials">References</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -82,7 +81,7 @@ function Sitemap() {
         <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="https://github.com/dashtink" target="_blank">GitHub</SitemapLink>
-          <SitemapLink href="/pricing">Resume</SitemapLink>
+          <SitemapLink href="https://docs.google.com/document/d/1vuED0TOKB_NvF8h-PyLJ0DAY0JFSa0_P0oM_Pmgg-q0/edit?usp=sharing" target="_blank">Resume</SitemapLink>
         </SitemapLinks>
       </div>
     </>

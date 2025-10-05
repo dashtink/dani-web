@@ -1,4 +1,3 @@
-import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
@@ -8,10 +7,8 @@ import { Testimonials } from '@/components/testimonials'
 import { BentoCard } from '@/components/bento-card'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Keyboard } from '@/components/keyboard'
-import { LinkedAvatars } from '@/components/linked-avatars'
 import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
-import { LogoTimeline } from '@/components/logo-timeline'
 import { Map } from '@/components/map'
 import { ContentAndThoughtLeadership } from '@/components/content-thought-leadership'
 import {
@@ -42,7 +39,7 @@ function Hero() {
                 I Build Marketing That Makes Complex Products Make Sense
               </h1>
               <p className="mt-8 text-lg font-medium text-pretty text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                Senior product marketer with 10+ years helping technical B2B companies translate what they've built into narratives that resonate. Three acquisitions. Track record across AI/ML, data platforms, developer tools, and SaaS—anywhere the technology is complex and the story matters.
+                Senior product marketer with 10+ years helping technical B2B companies translate what they've built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS—anywhere the technology is complex and the story matters.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
@@ -53,13 +50,14 @@ function Hero() {
                   Let's Talk
                 </a>
                 <a
-                  href="#"
+                  href="https://docs.google.com/document/d/1vuED0TOKB_NvF8h-PyLJ0DAY0JFSa0_P0oM_Pmgg-q0/edit?usp=sharing"
+                  target="_blank"
                   className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
                 >
                   Download Resume <span aria-hidden="true">→</span>
                 </a>
                 <a
-                  href="#"
+                  href="#selected-work"
                   className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
                 >
                   View Work <span aria-hidden="true">→</span>
@@ -121,49 +119,20 @@ function Hero() {
   )
 }
 
-function FeatureSection() {
-  return (
-    <div className="overflow-hidden" id="what-i-do">
-      <Container className="pb-24">
-        <Heading as="h2" className="max-w-3xl">
-          What I Do
-        </Heading>
-        <p className="mt-6 max-w-3xl text-lg/7 text-black">
-          I've spent the last decade building marketing at technical companies—from employee #3 at Knack through Series C at Mode Analytics. I love the early stage when nothing exists yet, but I also know how to come into something that's broken and fix it, or take something good and scale it.
-        </p>
-        <p className="mt-6 max-w-3xl text-lg/7 text-black">
-          I'm technical enough to hold my own in product conversations (I code, I understand infrastructure, I actually read the docs), but I lead with curiosity, not ego. I ask a lot of questions. I get into the weeds. I care about understanding how things actually work so I can explain why they matter.
-        </p>
-        <p className="mt-6 max-w-3xl text-lg/7 text-black">
-          I've worked across AI/ML infrastructure, data analytics, developer tools, no-code platforms, and sales tech. What they all have in common: products that are hard to explain and teams that need someone who gets it.
-        </p>
-        <p className="mt-6 max-w-3xl text-lg/7 text-black">
-          Most recently, I've been running ProductColab while figuring out what's next. Here's what I know: I miss being part of a team. I miss going deep on a single product and brand instead of rotating through client work. I want to find a company I can grow with—somewhere I can build something that lasts.
-        </p>
-        <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="mt-16 h-144 sm:h-auto sm:w-304"
-        />
-      </Container>
-    </div>
-  )
-}
 
 function BentoSection() {
   return (
     <Container id="what-i-bring">
       <Subheading>What I Bring</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        Builder Who Thrives in Ambiguity
+        The capabilities that make me effective
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
-          eyebrow="Experience"
+          eyebrow="Startup Builder"
           title="Builder Who Thrives in Ambiguity"
-          description="I've built marketing functions from scratch at multiple startups, including three that achieved acquisitions. I know how to operate when there's no playbook and no perfect information. But I also know how to come into something broken and fix it, or take something good and scale it."
+          description="I've built marketing functions from scratch at multiple startups, including two that reached acquisition shortly after I left. I know how to operate when there's no playbook and no perfect information. But I also know how to come into something broken and fix it, or take something good and scale it. At Wallaroo AI, I rebuilt their marketing engine with near-zero budget after a failed prior marketing motion. Cut spend by $100K while driving qualified pipeline and establishing cohesive brand positioning."
           graphic={
             <div className="h-80 bg-[url(/screenshots/profile.png)] bg-center" />
           }
@@ -171,38 +140,40 @@ function BentoSection() {
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
         <BentoCard
-          eyebrow="Technical"
-          title="Technical Depth Meets Curiosity"
-          description="I understand how products work because I take the time to learn. I build apps with Next.js, experiment with AI workflows using n8n, understand Docker and deployment, and constantly ask 'how does this actually work?' This isn't about being the most technical marketer—it's about earning credibility with Product and Engineering teams so we can collaborate as peers."
+          eyebrow="Hands-On Leader"
+          title="Hands-On Leader Who Drives Results"
+          description="I'm not just a strategist—I get into the weeds. Whether that's leading all marketing at Wallaroo AI, refreshing positioning at LeadIQ, or building GTM frameworks at CastorDoc, I balance strategic thinking with tactical execution. I track what matters: pipeline, conversion rates, sales cycle length. I've created sales enablement materials that teams actually use and built frameworks that improve how cross-functional teams work together."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-left" />
+            <div className="absolute inset-0 bg-cover bg-bottom bg-[url(/screenshots/ahrefs-health.png)] bg-left" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
         <BentoCard
-          eyebrow="Results"
-          title="Outcomes Over Activity"
-          description="I track what matters: pipeline, conversion rates, sales cycle length, win/loss patterns. I've doubled pipeline growth, improved demo-to-close rates, shortened enterprise sales cycles, and created materials that teams actually use."
+          eyebrow="Technical Credibility"
+          title="Technical Credibility in Practice"
+          description="I understand how products work because I take the time to learn. I build apps with Next.js, experiment with AI workflows using n8n, understand Docker and deployment. This isn't about being the most technical marketer—it's about earning credibility with Product and Engineering teams so we can collaborate as peers. Engineering teams respect positioning that reflects real capabilities. Sales teams trust enablement that doesn't oversimplify."
           graphic={
-            <div className="flex size-full pt-10 pl-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
-            </div>
+            <div className="absolute inset-0 bg-cover bg-top-left bg-[url(/screenshots/website-code-2.png)] bg-left" />
           }
+          fade={['bottom']}
           className="lg:col-span-2 lg:rounded-bl-4xl"
         />
         <BentoCard
           eyebrow="AI-Augmented"
-          title="AI-Augmented in Practice"
+          title="AI-Augmented Operator"
           description="I believe small teams should operate like bigger ones. I experiment with AI tools not because it's trendy, but because it works. I build workflows that cut content creation time, automate repetitive work, and free up humans to focus on strategy and creativity. I understand AI as an accelerator, not a replacement for judgment."
           graphic={<LogoCluster />}
           className="lg:col-span-2"
         />
         <BentoCard
-          eyebrow="Impact"
-          title="Recent Example"
-          description="At Wallaroo AI, I rebuilt their marketing engine with near-zero budget after a failed prior marketing motion. Cut spend by $100K while driving qualified pipeline and establishing cohesive brand positioning."
-          graphic={<Map />}
+          eyebrow="Company Stages"
+          title="Adaptable Across Company Stages"
+          description="I've built marketing at companies from employee #3 (Knack) through Series C (Mode Analytics) and everything in between. I know how to operate with no budget and no team, and I also know when to bring in specialists and how to structure teams that scale. I'm not precious about doing things 'the right way'—I care about doing what works for the stage you're at."
+          graphic={
+            <div className="absolute inset-0 bg-cover bg-[url(/screenshots/datasets.png)] bg-left" />
+          }
+          fade={['bottom']}
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>
@@ -217,7 +188,7 @@ function WallarooExample() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">AI & MLOps</h2>
+              <h2 className="text-base/7 font-semibold text-indigo-600">Series A | AI & MLOps</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
                 Wallaroo AI — Head of Marketing (Fractional)
               </p>
@@ -259,7 +230,7 @@ function LeadIQExample() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Sales Tech</h2>
+              <h2 className="text-base/7 font-semibold text-indigo-600">Series B | Sales Tech</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
                 LeadIQ — Head of Product Marketing (Fractional)
               </p>
@@ -301,7 +272,7 @@ function CastorDocExample() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Data Governance</h2>
+              <h2 className="text-base/7 font-semibold text-indigo-600">Series A | Data Governance</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
                 CastorDoc — Founding Product Marketing Lead
               </p>
@@ -336,6 +307,47 @@ function CastorDocExample() {
   )
 }
 
+function ModeExample() {
+  return (
+    <div className="overflow-hidden bg-gray-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+          <div className="lg:pt-4 lg:pr-4">
+            <div className="lg:max-w-lg">
+              <h2 className="text-base/7 font-semibold text-indigo-600">Series C | Data Analytics</h2>
+              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
+                Mode Analytics — Product Marketing Manager
+              </p>
+              <p className="mt-6 text-lg/8 text-black">
+                Led multiple Tier 1 product launches during company repositioning toward business users. Spearheaded flagship Datasets launch, developed personas and segmentation that guided targeted messaging and informed sales strategy. Created sales enablement materials and competitive positioning that supported acquisition readiness. Coordinated integrated campaign launching rebrand and product simultaneously.
+              </p>
+              <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
+                <blockquote className="text-base/7">
+                  <p>
+                    "Her strong background in product combined with her project management skills and ability to ramp up incredibly quickly in ambiguous environments made her a fantastic asset."
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 flex gap-x-4 text-sm/6">
+                  <div>
+                    <span className="font-semibold text-black">Katie Paxson Flynn</span> –{' '}
+                    <span className="text-gray-600">Director of PMM</span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <img
+            alt="Mode Analytics dashboard"
+            src="/screenshots/app.png"
+            width={2432}
+            height={1442}
+            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:ml-0 object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function WhatICareAbout() {
   const features = [
@@ -375,12 +387,9 @@ function WhatICareAbout() {
     <div className="bg-white py-24 sm:py-32" id="what-i-care-about">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-indigo-600">My principles</h2>
+          <h2 className="text-base/7 font-semibold text-indigo-600">What I Care About</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
             The values that drive my work
-          </p>
-          <p className="mt-6 text-lg/8 text-black">
-            I'm looking for companies and teams that align with what matters most to me in my career and work.
           </p>
         </div>
         <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-black sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
@@ -408,12 +417,12 @@ export default function Home() {
           <LogoCloud />
         </Container>
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
-          <FeatureSection />
           <BentoSection />
         </div>
         <WallarooExample />
         <LeadIQExample />
         <CastorDocExample />
+        <ModeExample />
         <WhatICareAbout />
         <ContentAndThoughtLeadership />
       </main>
