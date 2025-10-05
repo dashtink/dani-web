@@ -22,8 +22,27 @@ import {
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
   description:
-    'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Three acquisitions. Track record across AI/ML, data platforms, developer tools, and SaaS.',
+    'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS—anywhere the technology is complex and the story matters.',
+  openGraph: {
+    title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
+    description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Dani Kellogg - Product Marketing Leader',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
+    description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate.',
+    images: ['/og-image.png'],
+  },
 }
 
 function Hero() {
