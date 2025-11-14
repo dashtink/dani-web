@@ -4,21 +4,17 @@ import { Container } from './container'
 import { Gradient } from './gradient'
 import { Link } from './link'
 import { Logo } from './logo'
-import { Subheading } from './text'
 
 function CallToAction() {
   return (
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
-        <Subheading>Let's Talk</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-black sm:text-5xl">
-          Let's connect
-          <br />
-          and start a conversation.
-        </p>
+        <h2 className="text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
+          Connect With Me
+        </h2>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-lg text-sm/6 text-black">
-        I'm exploring senior product marketing and Head of Marketing roles at B2B companies where the product actually matters. Whether you're hiring, want to connect on LinkedIn, or just want to chat about product marketing—I'd love to hear from you.
+      <p className="mx-auto mt-8 max-w-lg text-lg/8 text-black">
+        I'm always open to conversations about product marketing, opportunities, or just connecting.
       </p>
       <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <Button className="w-full sm:w-auto" href="https://cal.com/dani-kellogg/30min" target="_blank">
@@ -81,7 +77,7 @@ function Sitemap() {
         <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="https://github.com/dashtink" target="_blank">GitHub</SitemapLink>
-          <SitemapLink href="https://docs.google.com/document/d/1vuED0TOKB_NvF8h-PyLJ0DAY0JFSa0_P0oM_Pmgg-q0/edit?usp=sharing" target="_blank">Resume</SitemapLink>
+          <SitemapLink href="https://drive.google.com/drive/folders/1Mam7Y41ectGjrYIw-x3pCxK2nwlJB2NV?usp=sharing" target="_blank">Resume</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -150,7 +146,7 @@ export function Footer() {
                   <PlusGridItem className="pt-6 lg:pb-6">
                     <Logo className="h-9" />
                     <p className="mt-4 max-w-sm text-sm/6 text-black">
-                      I'm based in Seattle with my wife and three kids. I love learning how things work, whether that's Agentic AI, creative writing or sourdough fermentation.
+                      I'm based in Seattle with my wife, three kids, and our dog. I'm a tinkerer at heart and love learning how things work, whether that's building AI agents, creative writing or sourdough fermentation. In another life I'd probably be a mad scientist.
                     </p>
                   </PlusGridItem>
                 </div>

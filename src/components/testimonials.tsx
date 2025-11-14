@@ -14,8 +14,9 @@ import {
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from './container'
+import { Gradient } from './gradient'
 import { Link } from './link'
-import { Heading, Subheading } from './text'
+import { Heading } from './text'
 
 const testimonials = [
   {
@@ -126,29 +127,27 @@ function TestimonialCard({
       {...props}
       className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
     >
-      <div className="absolute inset-x-0 top-0 aspect-square w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 rounded-3xl" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-25%"
+        className="absolute inset-0 rounded-3xl ring-1 ring-gray-950/10 ring-inset"
       />
       <figure className="relative p-10">
         <blockquote>
-          <p className="relative text-xl/7 text-white">
+          <p className="relative text-xl/7 text-black">
             <span aria-hidden="true" className="absolute -translate-x-full">
-              “
+              "
             </span>
             {children}
             <span aria-hidden="true" className="absolute">
-              ”
+              "
             </span>
           </p>
         </blockquote>
-        <figcaption className="mt-6 border-t border-white/20 pt-6">
-          <p className="text-sm/6 font-medium text-white">{name}</p>
-          <p className="text-sm/6 font-medium">
-            <span className="bg-linear-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
-              {title}
-            </span>
+        <figcaption className="mt-6 border-t border-black/20 pt-6">
+          <p className="text-sm/6 font-medium text-black">{name}</p>
+          <p className="text-sm/6 font-medium text-black">
+            {title}
           </p>
         </figcaption>
       </figure>
@@ -180,13 +179,10 @@ export function Testimonials() {
   }
 
   return (
-    <div className="overflow-hidden py-32" id="testimonials">
-      <Container>
+    <div className="relative overflow-hidden py-16 sm:py-24" id="testimonials">
+      <Gradient className="absolute inset-0" />
+      <Container className="relative">
         <div ref={setReferenceWindowRef}>
-        <Subheading>References</Subheading>
-        <Heading as="h3" className="mt-2">
-          What people say about working with me.
-        </Heading>
         </div>
       </Container>
       <div

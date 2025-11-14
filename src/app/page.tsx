@@ -12,12 +12,12 @@ import { LogoCluster } from '@/components/logo-cluster'
 import { Map } from '@/components/map'
 import { ContentAndThoughtLeadership } from '@/components/content-thought-leadership'
 import {
-  BookOpen,
-  Users,
-  Code,
-  Search,
-  MessageSquare,
-  TrendingUp,
+  Compass,
+  Target,
+  Network,
+  Wrench,
+  RefreshCw,
+  Heart,
 } from 'lucide-react'
 import type { Metadata } from 'next'
 
@@ -48,17 +48,18 @@ export const metadata: Metadata = {
 function Hero() {
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+      <Gradient className="absolute inset-0" />
       <Container className="relative">
         <Navbar />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 className="text-5xl font-regular tracking-tight text-pretty text-black sm:text-7xl">
-                I Build Marketing That Makes Complex Products Make Sense
+              <p className="text-base/7 font-semibold text-black">Senior Product Marketing - AI/ML, Data - B2B SaaS</p>
+              <h1 className="mt-2 text-5xl font-regular tracking-tight text-pretty text-black sm:text-7xl">
+              I Make Complex Products Resonate From Zero-To-Scale.
               </h1>
               <p className="mt-8 text-lg font-medium text-pretty text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                Senior product marketer with 10+ years helping technical B2B companies translate what they've built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS—anywhere the technology is complex and the story matters.
+              From positioning and GTM strategy to launch execution and sales enablement, I've built the product marketing function at startups through acquisition. 
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
@@ -69,7 +70,7 @@ function Hero() {
                   Let's Talk
                 </a>
                 <a
-                  href="https://docs.google.com/document/d/1vuED0TOKB_NvF8h-PyLJ0DAY0JFSa0_P0oM_Pmgg-q0/edit?usp=sharing"
+                  href="https://drive.google.com/drive/folders/1Mam7Y41ectGjrYIw-x3pCxK2nwlJB2NV?usp=sharing"
                   target="_blank"
                   className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
                 >
@@ -139,80 +140,19 @@ function Hero() {
 }
 
 
-function BentoSection() {
-  return (
-    <Container id="what-i-bring">
-      <Subheading>What I Bring</Subheading>
-      <Heading as="h3" className="mt-2 max-w-3xl">
-        The capabilities that make me effective
-      </Heading>
-
-      <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-        <BentoCard
-          eyebrow="Startup Builder"
-          title="Builder Who Thrives in Ambiguity"
-          description="I've built marketing functions from scratch at multiple startups, including two that reached acquisition shortly after I left. I know how to operate when there's no playbook and no perfect information. But I also know how to come into something broken and fix it, or take something good and scale it. At Wallaroo AI, I rebuilt their marketing engine with near-zero budget after a failed prior marketing motion. Cut spend by $100K while driving qualified pipeline and establishing cohesive brand positioning."
-          graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-center" />
-          }
-          fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
-        />
-        <BentoCard
-          eyebrow="Hands-On Leader"
-          title="Hands-On Leader Who Drives Results"
-          description="I'm not just a strategist—I get into the weeds. Whether that's leading all marketing at Wallaroo AI, refreshing positioning at LeadIQ, or building GTM frameworks at CastorDoc, I balance strategic thinking with tactical execution. I track what matters: pipeline, conversion rates, sales cycle length. I've created sales enablement materials that teams actually use and built frameworks that improve how cross-functional teams work together."
-          graphic={
-            <div className="absolute inset-0 bg-cover bg-bottom bg-[url(/screenshots/ahrefs-health.png)] bg-left" />
-          }
-          fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
-        />
-        <BentoCard
-          eyebrow="Technical Credibility"
-          title="Technical Credibility in Practice"
-          description="I understand how products work because I take the time to learn. I build apps with Next.js, experiment with AI workflows using n8n, understand Docker and deployment. This isn't about being the most technical marketer—it's about earning credibility with Product and Engineering teams so we can collaborate as peers. Engineering teams respect positioning that reflects real capabilities. Sales teams trust enablement that doesn't oversimplify."
-          graphic={
-            <div className="absolute inset-0 bg-cover bg-top-left bg-[url(/screenshots/website-code-2.png)] bg-left" />
-          }
-          fade={['bottom']}
-          className="lg:col-span-2 lg:rounded-bl-4xl"
-        />
-        <BentoCard
-          eyebrow="AI-Augmented"
-          title="AI-Augmented Operator"
-          description="I believe small teams should operate like bigger ones. I experiment with AI tools not because it's trendy, but because it works. I build workflows that cut content creation time, automate repetitive work, and free up humans to focus on strategy and creativity. I understand AI as an accelerator, not a replacement for judgment."
-          graphic={<LogoCluster />}
-          className="lg:col-span-2"
-        />
-        <BentoCard
-          eyebrow="Company Stages"
-          title="Adaptable Across Company Stages"
-          description="I've built marketing at companies from employee #3 (Knack) through Series C (Mode Analytics) and everything in between. I know how to operate with no budget and no team, and I also know when to bring in specialists and how to structure teams that scale. I'm not precious about doing things 'the right way'—I care about doing what works for the stage you're at."
-          graphic={
-            <div className="absolute inset-0 bg-cover bg-[url(/screenshots/datasets.png)] bg-left" />
-          }
-          fade={['bottom']}
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
-        />
-      </div>
-    </Container>
-  )
-}
-
 function WallarooExample() {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32" id="selected-work">
+    <div className="overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32" id="selected-work">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Series A | AI & MLOps</h2>
+              <h2 className="text-base/7 font-semibold text-black">Senior Marketing Marketing | AI & MLOps</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                Wallaroo AI — Head of Marketing (Fractional)
+                Wallaroo AI
               </p>
               <p className="mt-6 text-lg/8 text-black">
-                Rebuilt marketing engine with near-zero budget after failed prior marketing motion. Eliminated $100K in unnecessary expenses, refocused all channels around unified narrative, drove new qualified inbound pipeline. Positioned them as leader in AI software market with cohesive brand identity.
+                I joined Wallaroo after a failed marketing motion, my task was to rebuild our marketing engine with near-zero budget. We eliminated $100K in unnecessary expenses, refocused all channels around a unified narrative and drove new qualified inbound pipeline. We refreshed their positioning to target their full buying committee with cohesive brand identity.
               </p>
               <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
                 <blockquote className="text-base/7">
@@ -244,17 +184,17 @@ function WallarooExample() {
 
 function LeadIQExample() {
   return (
-    <div className="overflow-hidden bg-gray-50 py-24 sm:py-32">
+    <div className="overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Series B | Sales Tech</h2>
+              <h2 className="text-base/7 font-semibold text-black">Senior Product Marketing Manager | Sales Tech</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                LeadIQ — Head of Product Marketing (Fractional)
+                LeadIQ
               </p>
               <p className="mt-6 text-lg/8 text-black">
-                Rebooted PMM function during company pivot. Refreshed company-wide positioning and messaging, set new strategic direction around buying signals, rebuilt GTM framework for product launches. Created unified narrative across multiple product offerings in crowded market.
+                At LeadIQ I rebooted PMM function during company pivot. WE refreshed company-wide positioning and messaging, set new strategic direction around buying signals, rebuilt GTM framework for product launches. The outcome was a unified narrative across multiple product offerings in crowded market.
               </p>
               <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
                 <blockquote className="text-base/7">
@@ -291,12 +231,12 @@ function CastorDocExample() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Series A | Data Governance</h2>
+              <h2 className="text-base/7 font-semibold text-black"> Senior Product Marketing Manager, Lead | Data Governance</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                CastorDoc — Founding Product Marketing Lead
+                CastorDoc
               </p>
               <p className="mt-6 text-lg/8 text-black">
-                Built Product Marketing function from scratch for French startup entering US market. Established foundational GTM framework with Product team across 9-hour time difference, created core positioning and messaging, co-led complete rebrand, built first PMM metrics dashboard and win/loss analysis process.
+                I joined CastorDoc, a French startup, as a part of their US expansion team as their first Product Marketer. My focus was building the Product Marketing function from scratch and establishing a foundational GTM framework with Product team across 9-hour time difference. We created core positioning and messaging, co-led complete rebrand, built first PMM metrics dashboard and win/loss analysis process.
               </p>
               <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
                 <blockquote className="text-base/7">
@@ -328,17 +268,17 @@ function CastorDocExample() {
 
 function ModeExample() {
   return (
-    <div className="overflow-hidden bg-gray-50 py-24 sm:py-32">
+    <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Series C | Data Analytics</h2>
+              <h2 className="text-base/7 font-semibold text-black">Product Marketing Manager | Data Analytics</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                Mode Analytics — Product Marketing Manager
+                Mode Analytics 
               </p>
               <p className="mt-6 text-lg/8 text-black">
-                Led multiple Tier 1 product launches during company repositioning toward business users. Spearheaded flagship Datasets launch, developed personas and segmentation that guided targeted messaging and informed sales strategy. Created sales enablement materials and competitive positioning that supported acquisition readiness. Coordinated integrated campaign launching rebrand and product simultaneously.
+                At Mode, spearheaded their flagship product launch alongside an integrated campaign with their rebrand. For this launch and others we developed personas and segmentation that guided targeted messaging and informed sales strategy. Created sales enablement materials and competitive positioning that supported acquisition readiness.
               </p>
               <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
                 <blockquote className="text-base/7">
@@ -368,61 +308,81 @@ function ModeExample() {
   )
 }
 
+function QuickSummary() {
+  return (
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div>
+          <p className="text-base/7 font-semibold text-black">The TLDR</p>
+          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">A Bit About Me</h2>
+          <p className="mt-8 text-lg/8 text-black">
+          I've spent 10+ years at technical B2B startups—AI/ML, data infrastructure, sales tech, no-code platforms. I do product marketing, I've built the function from scratch at companies that got acquired, and I'm good at making complex products make sense when resources are tight. I live in Seattle with my wife and three kids. When I'm not product marketing, I'm usually exploring the Pacific Northwest, playing Minecraft with my kids, or tinkering with the latest hobby I've collected.
+          </p>
+        </div>
+        <div className="mt-24">
+          <LogoCloud />
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function WhatICareAbout() {
   const features = [
     {
-      name: 'Story comes first',
-      description: 'You can build the most sophisticated marketing infrastructure in the world, but if you\'re telling the wrong story, none of it matters. Finding that message that makes someone stop and think "this is exactly what I need"—that\'s the work.',
-      icon: BookOpen,
+      name: 'Create Order, Stay Flexible',
+      description: 'Ambiguity is part of the job. The key is finding a path forward and not being afraid to adjust when things change. Staying situationally aware and adapting as you go is what actually moves things forward.',
+      icon: Compass,
     },
     {
-      name: 'Marketing doesn\'t happen in a vacuum',
-      description: 'The best positioning comes from actually understanding what Product is building and why, and from hearing what Sales is experiencing in the field. Cross-functional collaboration isn\'t a nice-to-have, it\'s how good work gets done.',
-      icon: Users,
+      name: 'Less Ego, More Impact',
+      description: 'My focus is on what will make the most impact right now. Is it 10,000-foot strategy or finishing a slide deck for a critical sales call? Good work means going wherever you need to go to move the needle, regardless of what the task looks like.',
+      icon: Target,
     },
     {
-      name: 'Technical credibility earns trust',
-      description: 'Too many product marketers treat "technical" like a foreign language they need translated. If you\'re marketing a technical product, do the work to understand it. You don\'t need to build it, but you should understand it well enough to represent it honestly.',
-      icon: Code,
+      name: 'Cross-Collaboration, Not Silos',
+      description: 'The best outcomes happen when product, engineering, sales, and marketing work together. Being the translator and connector between teams isn\'t extra work—it\'s how you get anything meaningful done. Working in a silo kills momentum.',
+      icon: Network,
     },
     {
-      name: 'Curiosity over assumptions',
-      description: 'The best insights come from constantly asking "how does this actually work?" and "why does this matter?" I stay curious about products, customers, markets, and tools—because the moment you stop asking questions is when your marketing becomes generic.',
-      icon: Search,
+      name: 'Know What\'s Under The Hood',
+      description: 'Product in Product Marketing, is critical. Understanding how products actually work enables real conversations with technical teams and ultimately clearer GTM motions. You don\'t need to build it, but you should understand it well enough to represent it honestly.',
+      icon: Wrench,
     },
     {
-      name: 'Clear beats clever',
-      description: 'I\'d rather write something that\'s immediately understandable than something that sounds impressive but says nothing. Good marketing uses plain language to explain complex ideas, not jargon to obscure simple ones.',
-      icon: MessageSquare,
+      name: 'Always Be Iterating',
+      description: 'Perfect doesn\'t exist, and waiting for it wastes time. Staying directionally correct and always iterating toward the goal is what works. Plant your flag, set a baseline, measure against it, and get 1% better every day. Progress compounds.',
+      icon: RefreshCw,
     },
     {
-      name: 'Sustainable growth beats hypergrowth',
-      description: 'I\'ve watched companies scale too fast, burn out their teams, and lose what made them interesting. Building for the long term with strong fundamentals matters more than chasing the next funding round.',
-      icon: TrendingUp,
+      name: 'Authenticity Is Key',
+      description: 'Keeping it real matters, especially in the age of AI. Whether it\'s team communication, product launches, or content, people can tell when something\'s genuine versus generated. Authenticity builds trust and keeps us human.',
+      icon: Heart,
     },
   ]
 
   return (
-    <div className="bg-white py-24 sm:py-32" id="what-i-care-about">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="relative py-24 sm:py-32" id="what-i-care-about">
+      <Gradient className="absolute inset-0" />
+      <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-indigo-600">What I Care About</h2>
+          <h2 className="text-base/7 font-semibold text-black">My Philosophy</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-            The values that drive my work
+          Principles That Guide My Work
           </p>
         </div>
         <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-black sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
           {features.map((feature) => (
             <div key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-black">
-                <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text-indigo-600" />
+              <dt className="block mb-2 text-lg font-semibold text-black">
+                <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text-black" />
                 {feature.name}
-              </dt>{' '}
-              <dd className="inline">{feature.description}</dd>
+              </dt>
+              <dd className="block">{feature.description}</dd>
             </div>
           ))}
         </dl>
-      </div>
+      </Container>
     </div>
   )
 }
@@ -431,21 +391,16 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
+      <QuickSummary />
+      <WhatICareAbout />
       <main>
-        <Container className="mt-24">
-          <LogoCloud />
-        </Container>
-        <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
-          <BentoSection />
-        </div>
-        <WallarooExample />
-        <LeadIQExample />
         <CastorDocExample />
+        <WallarooExample />
+        <Testimonials />
         <ModeExample />
-        <WhatICareAbout />
+        <LeadIQExample />
         <ContentAndThoughtLeadership />
       </main>
-      <Testimonials />
       <Footer />
     </div>
   )
