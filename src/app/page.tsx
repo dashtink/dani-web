@@ -2,15 +2,10 @@ import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
-import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
-import { BentoCard } from '@/components/bento-card'
-import { Heading, Lead, Subheading } from '@/components/text'
-import { Keyboard } from '@/components/keyboard'
 import { LogoCloud } from '@/components/logo-cloud'
-import { LogoCluster } from '@/components/logo-cluster'
-import { Map } from '@/components/map'
-import { ContentAndThoughtLeadership } from '@/components/content-thought-leadership'
+import { Writing } from '@/components/writing'
+import { Projects } from '@/components/projects'
 import {
   Compass,
   Target,
@@ -19,31 +14,6 @@ import {
   RefreshCw,
   Heart,
 } from 'lucide-react'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
-  description:
-    'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS—anywhere the technology is complex and the story matters.',
-  openGraph: {
-    title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
-    description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Dani Kellogg - Product Marketing Leader',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
-    description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate.',
-    images: ['/og-image.png'],
-  },
-}
 
 function Hero() {
   return (
@@ -54,33 +24,25 @@ function Hero() {
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <p className="text-base/7 font-semibold text-black">Senior Product Marketing - AI/ML, Data - B2B SaaS</p>
+              <p className="text-base/7 font-semibold text-black">Product Marketing · Seattle</p>
               <h1 className="mt-2 text-5xl font-regular tracking-tight text-pretty text-black sm:text-7xl">
-              I Make Complex Products Resonate From Zero-To-Scale.
+              I Like Turning Complicated Things Into Stories That Land.
               </h1>
               <p className="mt-8 text-lg font-medium text-pretty text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
-              From positioning and GTM strategy to launch execution and sales enablement, I've built the product marketing function at startups through acquisition. 
+              For 10+ years I’ve done product marketing at technical B2B startups—AI/ML, data infrastructure, sales tech. These days that same instinct shows up in what I write and the side projects I can’t leave alone.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
-                  href="https://cal.com/dani-kellogg/30min"
-                  target="_blank"
+                  href="#writing"
                   className="rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
                 >
-                  Let's Talk
+                  Read My Writing
                 </a>
                 <a
-                  href="https://drive.google.com/drive/folders/1Mam7Y41ectGjrYIw-x3pCxK2nwlJB2NV?usp=sharing"
-                  target="_blank"
+                  href="#career-highlights"
                   className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
                 >
-                  Download Resume <span aria-hidden="true">→</span>
-                </a>
-                <a
-                  href="#selected-work"
-                  className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
-                >
-                  View Work <span aria-hidden="true">→</span>
+                  See My Work <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -139,39 +101,113 @@ function Hero() {
   )
 }
 
+type WorkHighlightData = {
+  id: string
+  eyebrow: string
+  company: string
+  description: string
+  quote: string
+  quoteName: string
+  quoteTitle: string
+  image: string
+  imageAlt: string
+}
 
-function WallarooExample() {
+const workHighlights: WorkHighlightData[] = [
+  {
+    id: 'castordoc',
+    eyebrow: 'Senior Product Marketing Manager, Lead | Data Governance',
+    company: 'CastorDoc',
+    description:
+      "I joined CastorDoc, a French startup, as part of their US expansion and their first product marketer. I built the PMM function from scratch and set up a GTM rhythm with the product team across a 9-hour time difference—core positioning and messaging, a full rebrand, and the company's first PMM metrics dashboard and win/loss process.",
+    quote:
+      '"She established rhythms and processes with the product team, defined our GTM and launch process, and owned company positioning as the company pivoted strategy in a competitive market."',
+    quoteName: 'Marcela Heywood',
+    quoteTitle: 'Head of Marketing',
+    image: '/screenshots/castordoc-recent.png',
+    imageAlt: 'CastorDoc interface',
+  },
+  {
+    id: 'wallaroo',
+    eyebrow: 'Senior Product Marketing | AI & MLOps',
+    company: 'Wallaroo AI',
+    description:
+      "I joined Wallaroo after a marketing motion that hadn't landed, with a mandate to rebuild the function on close to zero budget. We cut $100K in unnecessary spend, refocused every channel around one narrative, and turned that into real qualified pipeline—plus a positioning refresh built to speak to the whole buying committee with a more cohesive brand.",
+    quote:
+      '"Partnering with Dani was a game-changer. She expertly rebooted our marketing, branding, and positioned Wallaroo.AI as a leader in the AI software market."',
+    quoteName: 'Stephen Spellicy',
+    quoteTitle: 'COO',
+    image: '/screenshots/wallaroo-recent.png',
+    imageAlt: 'Wallaroo AI dashboard',
+  },
+  {
+    id: 'mode',
+    eyebrow: 'Product Marketing Manager | Data Analytics',
+    company: 'Mode Analytics',
+    description:
+      "At Mode I led the flagship product launch alongside a company rebrand, building the personas and segmentation that shaped messaging and sales strategy for the launches that followed. The sales enablement and competitive positioning work from that stretch carried through to the company's eventual acquisition.",
+    quote:
+      '"Her strong background in product combined with her project management skills and ability to ramp up incredibly quickly in ambiguous environments made her a fantastic asset."',
+    quoteName: 'Katie Paxson Flynn',
+    quoteTitle: 'Director of PMM',
+    image: '/screenshots/app.png',
+    imageAlt: 'Mode Analytics dashboard',
+  },
+  {
+    id: 'leadiq',
+    eyebrow: 'Senior Product Marketing Manager | Sales Tech',
+    company: 'LeadIQ',
+    description:
+      'At LeadIQ I rebuilt the PMM function during a company pivot—new positioning and messaging company-wide, a new strategic direction built around buying signals, and a GTM framework for product launches that held up across multiple product lines in a crowded market.',
+    quote:
+      '"Dani transformed our product marketing at LeadIQ and rebooted the motion from the ground up... significantly improving our market strategy in a crowded space."',
+    quoteName: 'Joerg Koehler',
+    quoteTitle: 'VP Marketing',
+    image: '/screenshots/leadiq-recent.png',
+    imageAlt: 'LeadIQ platform',
+  },
+]
+
+function WorkHighlight({
+  eyebrow,
+  company,
+  description,
+  quote,
+  quoteName,
+  quoteTitle,
+  image,
+  imageAlt,
+  muted,
+}: WorkHighlightData & { muted: boolean }) {
   return (
-    <div className="overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32" id="selected-work">
+    <div
+      className={`overflow-hidden py-24 sm:py-32 ${muted ? 'bg-gradient-to-b from-white to-gray-50' : 'bg-white'}`}
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pt-4 lg:pr-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-black">Senior Marketing Marketing | AI & MLOps</h2>
+              <h3 className="text-base/7 font-semibold text-black">{eyebrow}</h3>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                Wallaroo AI
+                {company}
               </p>
-              <p className="mt-6 text-lg/8 text-black">
-                I joined Wallaroo after a failed marketing motion, my task was to rebuild our marketing engine with near-zero budget. We eliminated $100K in unnecessary expenses, refocused all channels around a unified narrative and drove new qualified inbound pipeline. We refreshed their positioning to target their full buying committee with cohesive brand identity.
-              </p>
+              <p className="mt-6 text-lg/8 text-black">{description}</p>
               <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
                 <blockquote className="text-base/7">
-                  <p>
-                    "Partnering with Dani was a game-changer. She expertly rebooted our marketing, branding, and positioned Wallaroo.AI as a leader in the AI software market."
-                  </p>
+                  <p>{quote}</p>
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-sm/6">
                   <div>
-                    <span className="font-semibold text-black">Stephen Spellicy</span> –{' '}
-                    <span className="text-gray-600">COO</span>
+                    <span className="font-semibold text-black">{quoteName}</span> –{' '}
+                    <span className="text-gray-600">{quoteTitle}</span>
                   </div>
                 </figcaption>
               </figure>
             </div>
           </div>
           <img
-            alt="Wallaroo AI dashboard"
-            src="/screenshots/wallaroo-recent.png"
+            alt={imageAlt}
+            src={image}
             width={2432}
             height={1442}
             className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:ml-0 object-cover"
@@ -182,141 +218,33 @@ function WallarooExample() {
   )
 }
 
-function LeadIQExample() {
+function WorkHighlights() {
   return (
-    <div className="overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
-          <div className="lg:pt-4 lg:pr-4">
-            <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-black">Senior Product Marketing Manager | Sales Tech</h2>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                LeadIQ
-              </p>
-              <p className="mt-6 text-lg/8 text-black">
-                At LeadIQ I rebooted PMM function during company pivot. WE refreshed company-wide positioning and messaging, set new strategic direction around buying signals, rebuilt GTM framework for product launches. The outcome was a unified narrative across multiple product offerings in crowded market.
-              </p>
-              <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
-                <blockquote className="text-base/7">
-                  <p>
-                    "Dani transformed our product marketing at LeadIQ and rebooted the motion from the ground up... significantly improving our market strategy in a crowded space."
-                  </p>
-                </blockquote>
-                <figcaption className="mt-6 flex gap-x-4 text-sm/6">
-                  <div>
-                    <span className="font-semibold text-black">Joerg Koehler</span> –{' '}
-                    <span className="text-gray-600">VP Marketing</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <img
-            alt="LeadIQ platform"
-            src="/screenshots/leadiq-recent.png"
-            width={2432}
-            height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:ml-0 object-cover"
-          />
+    <div id="career-highlights">
+      <div className="mx-auto max-w-7xl px-6 pt-24 sm:pt-32 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-base/7 font-semibold text-black">Career Highlights</h2>
+          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
+            Where I’ve Made An Impact
+          </p>
         </div>
       </div>
+      {workHighlights.map((highlight, index) => (
+        <WorkHighlight key={highlight.id} {...highlight} muted={index % 2 === 1} />
+      ))}
     </div>
   )
 }
 
-function CastorDocExample() {
+function AboutMe() {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
-          <div className="lg:pt-4 lg:pr-4">
-            <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-black"> Senior Product Marketing Manager, Lead | Data Governance</h2>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                CastorDoc
-              </p>
-              <p className="mt-6 text-lg/8 text-black">
-                I joined CastorDoc, a French startup, as a part of their US expansion team as their first Product Marketer. My focus was building the Product Marketing function from scratch and establishing a foundational GTM framework with Product team across 9-hour time difference. We created core positioning and messaging, co-led complete rebrand, built first PMM metrics dashboard and win/loss analysis process.
-              </p>
-              <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
-                <blockquote className="text-base/7">
-                  <p>
-                    "She established rhythms and processes with the product team, defined our GTM and launch process, and owned company positioning as the company pivoted strategy in a competitive market."
-                  </p>
-                </blockquote>
-                <figcaption className="mt-6 flex gap-x-4 text-sm/6">
-                  <div>
-                    <span className="font-semibold text-black">Marcela Heywood</span> –{' '}
-                    <span className="text-gray-600">Head of Marketing</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <img
-            alt="CastorDoc interface"
-            src="/screenshots/castordoc-recent.png"
-            width={2432}
-            height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:ml-0 object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function ModeExample() {
-  return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
-          <div className="lg:pt-4 lg:pr-4">
-            <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-black">Product Marketing Manager | Data Analytics</h2>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                Mode Analytics 
-              </p>
-              <p className="mt-6 text-lg/8 text-black">
-                At Mode, spearheaded their flagship product launch alongside an integrated campaign with their rebrand. For this launch and others we developed personas and segmentation that guided targeted messaging and informed sales strategy. Created sales enablement materials and competitive positioning that supported acquisition readiness.
-              </p>
-              <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
-                <blockquote className="text-base/7">
-                  <p>
-                    "Her strong background in product combined with her project management skills and ability to ramp up incredibly quickly in ambiguous environments made her a fantastic asset."
-                  </p>
-                </blockquote>
-                <figcaption className="mt-6 flex gap-x-4 text-sm/6">
-                  <div>
-                    <span className="font-semibold text-black">Katie Paxson Flynn</span> –{' '}
-                    <span className="text-gray-600">Director of PMM</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <img
-            alt="Mode Analytics dashboard"
-            src="/screenshots/app.png"
-            width={2432}
-            height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:ml-0 object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function QuickSummary() {
-  return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-24 sm:py-32" id="about">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div>
           <p className="text-base/7 font-semibold text-black">The TLDR</p>
           <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">A Bit About Me</h2>
           <p className="mt-8 text-lg/8 text-black">
-          I've spent 10+ years at technical B2B startups—AI/ML, data infrastructure, sales tech, no-code platforms. I do product marketing, I've built the function from scratch at companies that got acquired, and I'm good at making complex products make sense when resources are tight. I live in Seattle with my wife and three kids. When I'm not product marketing, I'm usually exploring the Pacific Northwest, playing Minecraft with my kids, or tinkering with the latest hobby I've collected.
+          I’ve spent the last 10+ years in product marketing at technical B2B startups—AI/ML, data infrastructure, sales tech, no-code platforms. I’ve built the function from scratch a few times over, at a couple of companies that ended up getting acquired. These days I’m doing that same work at my current company, and using this space for everything else: writing, side projects, and whatever’s currently got my attention. I live in Seattle with my wife and three kids. When I’m not at a keyboard, I’m usually exploring the Pacific Northwest, playing Minecraft with my kids, or tinkering with whatever hobby I’ve picked up this month.
           </p>
         </div>
         <div className="mt-24">
@@ -391,15 +319,13 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
-      <QuickSummary />
+      <AboutMe />
       <WhatICareAbout />
       <main>
-        <CastorDocExample />
-        <WallarooExample />
+        <WorkHighlights />
         <Testimonials />
-        <ModeExample />
-        <LeadIQExample />
-        <ContentAndThoughtLeadership />
+        <Writing />
+        <Projects />
       </main>
       <Footer />
     </div>

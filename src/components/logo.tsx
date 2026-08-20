@@ -1,7 +1,4 @@
-'use client'
-
 import { clsx } from 'clsx'
-import { motion } from 'framer-motion'
 
 export function Logo({ className }: { className?: string }) {
   return (

@@ -15,7 +15,7 @@ export default function NotFound() {
               Page not found
             </Heading>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Sorry, we couldn't find the page you're looking for.
+              Sorry, we couldn’t find the page you’re looking for.
             </p>
             <div className="mt-10">
               <Link href="/" className="text-base font-semibold leading-6 text-indigo-600 hover:text-indigo-500">

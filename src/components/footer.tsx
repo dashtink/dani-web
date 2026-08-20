@@ -14,11 +14,11 @@ function CallToAction() {
         </h2>
       </hgroup>
       <p className="mx-auto mt-8 max-w-lg text-lg/8 text-black">
-        I'm always open to conversations about product marketing, opportunities, or just connecting.
+        Always happy to talk product marketing, trade notes on a side project, or just catch up.
       </p>
       <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <Button className="w-full sm:w-auto" href="https://cal.com/dani-kellogg/30min" target="_blank">
-          Let's Chat
+          Let’s Chat
         </Button>
         <a
           href="https://linkedin.com/in/dashkellogg"
@@ -57,11 +57,12 @@ function Sitemap() {
       <div>
         <SitemapHeading>Explore</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#what-i-bring">What I Bring</SitemapLink>
-          <SitemapLink href="#selected-work">Selected Work</SitemapLink>
+          <SitemapLink href="#about">About</SitemapLink>
+          <SitemapLink href="#career-highlights">Career Highlights</SitemapLink>
           <SitemapLink href="#what-i-care-about">What I Care About</SitemapLink>
-          <SitemapLink href="#content-thought-leadership">Content</SitemapLink>
-          <SitemapLink href="#testimonials">References</SitemapLink>
+          <SitemapLink href="#writing">Writing</SitemapLink>
+          <SitemapLink href="#projects">Projects</SitemapLink>
+          <SitemapLink href="#testimonials">What People Say</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -74,9 +75,10 @@ function Sitemap() {
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Resources</SitemapHeading>
+        <SitemapHeading>Elsewhere</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="https://github.com/dashtink" target="_blank">GitHub</SitemapLink>
+          <SitemapLink href="https://danikellogg.substack.com" target="_blank">Substack</SitemapLink>
           <SitemapLink href="https://drive.google.com/drive/folders/1Mam7Y41ectGjrYIw-x3pCxK2nwlJB2NV?usp=sharing" target="_blank">Resume</SitemapLink>
         </SitemapLinks>
       </div>
@@ -146,7 +148,7 @@ export function Footer() {
                   <PlusGridItem className="pt-6 lg:pb-6">
                     <Logo className="h-9" />
                     <p className="mt-4 max-w-sm text-sm/6 text-black">
-                      I'm based in Seattle with my wife, three kids, and our dog. I'm a tinkerer at heart and love learning how things work, whether that's building AI agents, creative writing or sourdough fermentation. In another life I'd probably be a mad scientist.
+                      I’m based in Seattle with my wife, three kids, and our dog. I’m a tinkerer at heart and love learning how things work, whether that’s building AI agents, creative writing or sourdough fermentation. In another life I’d probably be a mad scientist.
                     </p>
                   </PlusGridItem>
                 </div>

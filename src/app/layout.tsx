@@ -1,23 +1,28 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
+import { Red_Hat_Display } from 'next/font/google'
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ['latin'],
+  variable: '--font-red-hat-display',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dani-kellogg.com'),
   title: {
     template: '%s - Dani Kellogg',
-    default: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
+    default: 'Dani Kellogg',
   },
-  description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS—anywhere the technology is complex and the story matters.',
+  description: 'Product marketer, writer, and occasional builder based in Seattle. Notes on product marketing and technical B2B, plus small side projects.',
   keywords: [
+    'Dani Kellogg',
     'product marketing',
     'B2B SaaS',
     'technical marketing',
-    'AI marketing',
-    'data platforms',
-    'startup marketing',
-    'product positioning',
-    'GTM strategy',
-    'marketing leadership',
-    'technical B2B'
+    'Seattle',
+    'writing',
+    'side projects'
   ],
   authors: [{ name: 'Dani Kellogg' }],
   creator: 'Dani Kellogg',
@@ -38,21 +43,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://dani-kellogg.com',
     siteName: 'Dani Kellogg',
-    title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
-    description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate. Track record across AI/ML, data platforms, and SaaS.',
+    title: 'Dani Kellogg',
+    description: 'Product marketer, writer, and occasional builder based in Seattle. Notes on product marketing and technical B2B, plus small side projects.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Dani Kellogg - Product Marketing Leader',
+        alt: 'Dani Kellogg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dani Kellogg - Product Marketing Leader for Technical B2B SaaS',
-    description: 'Senior product marketer with 10+ years helping technical B2B companies translate what they\'ve built into narratives that resonate.',
+    title: 'Dani Kellogg',
+    description: 'Product marketer, writer, and occasional builder based in Seattle.',
     images: ['/og-image.png'],
     creator: '@dashkellogg',
   },
@@ -68,12 +73,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={redHatDisplay.variable}>
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />

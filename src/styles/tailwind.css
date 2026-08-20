@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: "Red Hat Display", system-ui, sans-serif;
+  --font-sans: var(--font-red-hat-display), system-ui, sans-serif;
 
   --radius-4xl: 2rem;
 }

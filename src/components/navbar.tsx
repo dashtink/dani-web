@@ -12,11 +12,12 @@ import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
   const links = [
-    { href: '#what-i-bring', label: 'What I Bring' },
-    { href: '#selected-work', label: 'Selected Work' },
+    { href: '#about', label: 'About' },
+    { href: '#career-highlights', label: 'Career Highlights' },
     { href: '#what-i-care-about', label: 'What I Care About' },
-    { href: '#content-thought-leadership', label: 'Content' },
-    { href: '#testimonials', label: 'References' },
+    { href: '#writing', label: 'Writing' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#testimonials', label: 'What People Say' },
   ]
 
 function DesktopNav() {

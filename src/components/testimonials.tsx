@@ -1,7 +1,6 @@
 'use client'
 
 import * as Headless from '@headlessui/react'
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
 import {
   MotionValue,
@@ -15,8 +14,6 @@ import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from './container'
 import { Gradient } from './gradient'
-import { Link } from './link'
-import { Heading } from './text'
 
 const testimonials = [
   {
@@ -73,13 +70,11 @@ const testimonials = [
 function TestimonialCard({
   name,
   title,
-  img,
   children,
   bounds,
   scrollX,
   ...props
 }: {
-  img: string
   name: string
   title: string
   children: React.ReactNode
@@ -136,11 +131,11 @@ function TestimonialCard({
         <blockquote>
           <p className="relative text-xl/7 text-black">
             <span aria-hidden="true" className="absolute -translate-x-full">
-              "
+              “
             </span>
             {children}
             <span aria-hidden="true" className="absolute">
-              "
+              ”
             </span>
           </p>
         </blockquote>
@@ -182,8 +177,15 @@ export function Testimonials() {
     <div className="relative overflow-hidden py-16 sm:py-24" id="testimonials">
       <Gradient className="absolute inset-0" />
       <Container className="relative">
-        <div ref={setReferenceWindowRef}>
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-base/7 font-semibold text-black">
+            What People Say
+          </h2>
+          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
+            Kind Words From People I’ve Worked With
+          </p>
         </div>
+        <div ref={setReferenceWindowRef} />
       </Container>
       <div
         ref={scrollRef}
@@ -199,7 +201,6 @@ export function Testimonials() {
             key={testimonialIndex}
             name={name}
             title={title}
-            img=""
             bounds={bounds}
             scrollX={scrollX}
             onClick={() => scrollTo(testimonialIndex)}
