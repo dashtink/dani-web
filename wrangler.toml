@@ -1,6 +1,9 @@
 name = "dani-web"
 compatibility_date = "2024-10-01"
-
-[pages]
-build = { command = "npm run build", cwd = "." }
 pages_build_output_dir = "out"
+
+[build]
+command = "npm run build"
+
+[assets]
+directory = "out"
