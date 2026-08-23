@@ -15,8 +15,6 @@ import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
     { href: '#about', label: 'About' },
     { href: '#career-highlights', label: 'Career Highlights' },
     { href: '#what-i-care-about', label: 'What I Care About' },
-    { href: '#writing', label: 'Writing' },
-    { href: '#projects', label: 'Projects' },
     { href: '#testimonials', label: 'What People Say' },
   ]
 

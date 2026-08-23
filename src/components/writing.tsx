@@ -37,31 +37,6 @@ const pastWriting = [
   },
   {
     id: 3,
-    title: 'AI: The Age of Synthesis',
-    href: 'https://www.aiacceleratorinstitute.com/ai-the-age-of-synthesis/',
-    imageUrl:
-      'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxBSSUyMGRhdGF8ZW58MHx8fHwxNjg4NTU5MzgxfDA&ixlib=rb-4.0.3&q=80&w=2000',
-    company: 'AI Accelerator Institute',
-    label: 'Thought Leadership',
-  },
-  {
-    id: 4,
-    title: 'Why Transparent Async Communication',
-    href: 'https://learn.productcolab.com/why-transparent-async-communication/',
-    imageUrl: 'https://learn.productcolab.com/content/images/2025/07/22.png',
-    company: 'ProductColab',
-    label: 'Thought Leadership',
-  },
-  {
-    id: 5,
-    title: 'The Pros and Cons of Product Launch',
-    href: 'https://learn.productcolab.com/the-pros-and-cons-of-product-launch/',
-    imageUrl: 'https://learn.productcolab.com/content/images/2025/07/19-5.png',
-    company: 'ProductColab',
-    label: 'Thought Leadership',
-  },
-  {
-    id: 6,
     title: 'Video: Building Technical Product Marketing Teams',
     href: 'https://www.youtube.com/watch?v=Vg4f695fvU8',
     imageUrl: 'https://i.ytimg.com/vi/Vg4f695fvU8/maxresdefault.jpg',
@@ -92,7 +67,7 @@ export function Writing() {
               Latest from Substack
             </h3>
             <a
-              href="https://danikellogg.substack.com"
+              href="https://supercrisp.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-black hover:text-gray-700"

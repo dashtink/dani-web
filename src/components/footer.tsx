@@ -60,8 +60,6 @@ function Sitemap() {
           <SitemapLink href="#about">About</SitemapLink>
           <SitemapLink href="#career-highlights">Career Highlights</SitemapLink>
           <SitemapLink href="#what-i-care-about">What I Care About</SitemapLink>
-          <SitemapLink href="#writing">Writing</SitemapLink>
-          <SitemapLink href="#projects">Projects</SitemapLink>
           <SitemapLink href="#testimonials">What People Say</SitemapLink>
         </SitemapLinks>
       </div>
@@ -78,7 +76,7 @@ function Sitemap() {
         <SitemapHeading>Elsewhere</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="https://github.com/dashtink" target="_blank">GitHub</SitemapLink>
-          <SitemapLink href="https://danikellogg.substack.com" target="_blank">Substack</SitemapLink>
+          <SitemapLink href="https://supercrisp.substack.com/" target="_blank">Substack</SitemapLink>
           <SitemapLink href="https://drive.google.com/drive/folders/1Mam7Y41ectGjrYIw-x3pCxK2nwlJB2NV?usp=sharing" target="_blank">Resume</SitemapLink>
         </SitemapLinks>
       </div>
@@ -148,7 +146,7 @@ export function Footer() {
                   <PlusGridItem className="pt-6 lg:pb-6">
                     <Logo className="h-9" />
                     <p className="mt-4 max-w-sm text-sm/6 text-black">
-                      I’m based in Seattle with my wife, three kids, and our dog. I’m a tinkerer at heart and love learning how things work, whether that’s building AI agents, creative writing or sourdough fermentation. In another life I’d probably be a mad scientist.
+                      I’m based in Seattle with my wife and three kids. I’m a tinkerer at heart and love learning how things work, whether that’s building AI agents, creative writing or sourdough fermentation. In another life I’d probably be a mad scientist.
                     </p>
                   </PlusGridItem>
                 </div>

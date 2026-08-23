@@ -4,8 +4,6 @@ import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Testimonials } from '@/components/testimonials'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Writing } from '@/components/writing'
-import { Projects } from '@/components/projects'
 import {
   Compass,
   Target,
@@ -33,16 +31,18 @@ function Hero() {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
-                  href="#writing"
+                  href="#career-highlights"
                   className="rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
                 >
-                  Read My Writing
+                  See My Work
                 </a>
                 <a
-                  href="#career-highlights"
+                  href="https://supercrisp.substack.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
                 >
-                  See My Work <span aria-hidden="true">→</span>
+                  Read My Writing <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -114,6 +114,19 @@ type WorkHighlightData = {
 }
 
 const workHighlights: WorkHighlightData[] = [
+  {
+    id: 'qualtrics',
+    eyebrow: 'Senior Product Marketing Manager | Enterprise Experience Intelligence',
+    company: 'Qualtrics',
+    description:
+      "At Qualtrics, I owned go-to-market for Voice of Customer, PLG/Maturity, and mid-market segment strategy within Enterprise Experience Intelligence. I built the company's first structured ICP framework for the mid-market segment from 43 customer interviews, and redesigned the cross-functional product-launch process now used as the company-wide template for multi-feature launches. I was also selected to lead field enablement content for the company's largest platform launch of the year, translating in-flight product strategy into training material used by teams across the org.",
+    quote:
+      '"Dani is one of the most AI-literate people I\'ve worked with... her curiosity, tenacity, and desire to build is infectious, and makes others want to level up alongside her."',
+    quoteName: 'Arielle Jendruh',
+    quoteTitle: 'Market Intelligence Leader, Qualtrics',
+    image: '/screenshots/qualtrics-web.png',
+    imageAlt: 'Qualtrics platform',
+  },
   {
     id: 'castordoc',
     eyebrow: 'Senior Product Marketing Manager, Lead | Data Governance',
@@ -324,8 +337,7 @@ export default function Home() {
       <main>
         <WorkHighlights />
         <Testimonials />
-        <Writing />
-        <Projects />
+        {/* Writing and Projects sections are hidden until Substack and real project pages are ready */}
       </main>
       <Footer />
     </div>
