@@ -17,7 +17,7 @@ function Hero() {
     <div className="relative bg-[radial-gradient(rgba(78,207,108,0.16)_1px,transparent_1px)] [background-size:22px_22px]">
       <Container className="relative">
         <Navbar />
-        <div className="py-[clamp(56px,8vw,96px)] lg:flex lg:items-center lg:gap-11">
+        <div className="py-[clamp(56px,8vw,96px)] lg:flex lg:items-start lg:gap-11">
           <div className="max-w-xl lg:flex-1">
             <div className="inline-flex items-center gap-2 rounded border border-[rgba(78,207,108,0.4)] bg-[rgba(78,207,108,0.08)] px-3 py-1.5">
               <span className="size-1.5 rounded-full bg-accent-green" aria-hidden="true" />
