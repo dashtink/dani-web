@@ -1,24 +1,23 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
-import { Heading } from '@/components/text'
 import { Link } from '@/components/link'
 
 export default function NotFound() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-bg-base">
       <Container className="relative">
         <Navbar />
-        <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+        <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-2xl text-center">
-            <Heading as="h1" className="mt-2">
+            <h1 className="text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl">
               Page not found
-            </Heading>
-            <p className="mt-6 text-lg/8 text-gray-600">
+            </h1>
+            <p className="mt-6 text-lg/8 text-text-secondary">
               Sorry, we couldn’t find the page you’re looking for.
             </p>
             <div className="mt-10">
-              <Link href="/" className="text-base font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <Link href="/" className="text-base font-semibold text-accent-green hover:text-[#7fe89a]">
                 Go back home <span aria-hidden="true">→</span>
               </Link>
             </div>

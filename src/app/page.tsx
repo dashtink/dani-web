@@ -1,100 +1,66 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
-import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Testimonials } from '@/components/testimonials'
 import { LogoCloud } from '@/components/logo-cloud'
-import {
-  Compass,
-  Target,
-  Network,
-  Wrench,
-  RefreshCw,
-  Heart,
-} from 'lucide-react'
+import { Button } from '@/components/button'
+
+const stats = [
+  { value: '10+', label: 'years in PMM' },
+  { value: '4', label: 'startups built 0→1' },
+  { value: '2', label: 'acquisitions' },
+  { value: 'AI/ML', label: '+ data infra focus' },
+]
 
 function Hero() {
   return (
-    <div className="relative">
-      <Gradient className="absolute inset-0" />
+    <div className="relative bg-[radial-gradient(rgba(78,207,108,0.16)_1px,transparent_1px)] [background-size:22px_22px]">
       <Container className="relative">
         <Navbar />
-        <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
-          <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-            <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <p className="text-base/7 font-semibold text-black">Product Marketing · Seattle</p>
-              <h1 className="mt-2 text-5xl font-regular tracking-tight text-pretty text-black sm:text-7xl">
-              I Like Turning Complicated Things Into Stories That Land.
-              </h1>
-              <p className="mt-8 text-lg font-medium text-pretty text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
-              For 10+ years I’ve done product marketing at technical B2B startups—AI/ML, data infrastructure, sales tech. These days that same instinct shows up in what I write and the side projects I can’t leave alone.
-              </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <a
-                  href="#career-highlights"
-                  className="rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-                >
-                  See My Work
-                </a>
-                <a
-                  href="https://supercrisp.substack.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold leading-6 text-black hover:text-gray-700"
-                >
-                  Read My Writing <span aria-hidden="true">→</span>
-                </a>
-              </div>
+        <div className="flex flex-wrap items-center gap-11 py-[clamp(56px,8vw,96px)]">
+          <div className="max-w-xl flex-1">
+            <div className="inline-flex items-center gap-2 rounded border border-[rgba(78,207,108,0.4)] bg-[rgba(78,207,108,0.08)] px-3 py-1.5">
+              <span className="size-1.5 rounded-full bg-accent-green" aria-hidden="true" />
+              <span className="font-mono text-[12.5px] text-[#8fe6a2]">
+                product_marketing / seattle
+              </span>
             </div>
-            <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-              <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-0 xl:pt-80">
-                <div className="relative">
-                  <img
-                    alt=""
-                    src="/dani-3.png"
-                    className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
-                </div>
-              </div>
-              <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                <div className="relative">
-                  <img
-                    alt=""
-                    src="/dani-2.png"
-                    className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
-                </div>
-                <div className="relative">
-                  <img
-                    alt=""
-                    src="/dani-4.png"
-                    className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
-                </div>
-              </div>
-              <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                <div className="relative">
-                  <img
-                    alt=""
-                    src="https://images.unsplash.com/photo-1613525850352-52de526e2336?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHNlYXR0bGV8ZW58MHx8MHx8fDA%3D"
-                    className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
-                </div>
-                <div className="relative">
-                  <img
-                    alt=""
-                    src="/dani-1.png"
-                    className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
-                </div>
-              </div>
+            <h1 className="mt-5 text-5xl font-bold tracking-tight text-pretty text-text-primary sm:text-7xl">
+              I Like Turning Complicated Things Into Stories That Land.
+            </h1>
+            <p className="mt-6 max-w-lg text-lg/[1.6] text-text-secondary">
+              For 10+ years I’ve done product marketing at technical B2B startups—AI/ML, data infrastructure, sales tech. These days that same instinct shows up in what I write and the side projects I can’t leave alone.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button href="#career-highlights">See My Work</Button>
+              <a
+                href="https://supercrisp.substack.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md border border-border-strong px-[22px] py-3 text-[15px] font-semibold text-text-primary hover:bg-white/5"
+              >
+                Read My Writing <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
+          <div className="w-[min(280px,100%)] flex-none overflow-hidden rounded-xl border border-border-strong">
+            <img
+              alt=""
+              src="/dani-3.png"
+              className="aspect-[3/4] w-full object-cover grayscale-[35%] contrast-[1.05]"
+            />
+          </div>
+        </div>
+
+        <div className="mb-[clamp(48px,6vw,72px)] grid grid-cols-2 divide-x divide-y divide-border-default overflow-hidden rounded-lg border border-border-default sm:grid-cols-4 sm:divide-y-0">
+          {stats.map((stat) => (
+            <div key={stat.label} className="px-6 py-[22px]">
+              <div className="font-mono text-2xl font-semibold text-accent-green">
+                {stat.value}
+              </div>
+              <div className="mt-1 text-[13px] text-text-tertiary">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </Container>
     </div>
@@ -190,42 +156,31 @@ function WorkHighlight({
   quoteTitle,
   image,
   imageAlt,
-  muted,
-}: WorkHighlightData & { muted: boolean }) {
+}: WorkHighlightData) {
   return (
-    <div
-      className={`overflow-hidden py-24 sm:py-32 ${muted ? 'bg-gradient-to-b from-white to-gray-50' : 'bg-white'}`}
-    >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
-          <div className="lg:pt-4 lg:pr-4">
-            <div className="lg:max-w-lg">
-              <h3 className="text-base/7 font-semibold text-black">{eyebrow}</h3>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-                {company}
-              </p>
-              <p className="mt-6 text-lg/8 text-black">{description}</p>
-              <figure className="mt-16 border-l border-gray-200 pl-8 text-black">
-                <blockquote className="text-base/7">
-                  <p>{quote}</p>
-                </blockquote>
-                <figcaption className="mt-6 flex gap-x-4 text-sm/6">
-                  <div>
-                    <span className="font-semibold text-black">{quoteName}</span> –{' '}
-                    <span className="text-gray-600">{quoteTitle}</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <img
-            alt={imageAlt}
-            src={image}
-            width={2432}
-            height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:ml-0 object-cover"
-          />
+    <div className="py-14">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-11 px-6 lg:grid-cols-2 lg:items-start lg:px-8">
+        <div>
+          <h3 className="font-mono text-[13px] font-medium text-accent-green">{eyebrow}</h3>
+          <p className="mt-2.5 text-3xl font-semibold tracking-tight text-pretty text-text-primary sm:text-4xl">
+            {company}
+          </p>
+          <p className="mt-4 text-base/[1.65] text-text-secondary">{description}</p>
+          <figure className="mt-7 border-l-2 border-accent-green pl-5">
+            <blockquote className="text-[15px]/[1.6] text-text-quote">{quote}</blockquote>
+            <figcaption className="mt-3.5 text-[13.5px]">
+              <span className="font-bold text-text-primary">{quoteName}</span>{' '}
+              – <span className="text-text-tertiary">{quoteTitle}</span>
+            </figcaption>
+          </figure>
         </div>
+        <img
+          alt={imageAlt}
+          src={image}
+          width={2432}
+          height={1442}
+          className="aspect-[16/10] w-full rounded-[10px] border border-border-default object-cover"
+        />
       </div>
     </div>
   )
@@ -233,17 +188,17 @@ function WorkHighlight({
 
 function WorkHighlights() {
   return (
-    <div id="career-highlights">
-      <div className="mx-auto max-w-7xl px-6 pt-24 sm:pt-32 lg:px-8">
+    <div id="career-highlights" className="border-t border-border-soft bg-bg-panel">
+      <div className="mx-auto max-w-7xl px-6 pt-16 sm:pt-20 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-black">Career Highlights</h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
+          <h2 className="text-base/7 font-semibold text-accent-green">{'// work'}</h2>
+          <p className="mt-3 text-4xl font-semibold tracking-tight text-pretty text-text-primary sm:text-5xl">
             Where I’ve Made An Impact
           </p>
         </div>
       </div>
-      {workHighlights.map((highlight, index) => (
-        <WorkHighlight key={highlight.id} {...highlight} muted={index % 2 === 1} />
+      {workHighlights.map((highlight) => (
+        <WorkHighlight key={highlight.id} {...highlight} />
       ))}
     </div>
   )
@@ -251,16 +206,18 @@ function WorkHighlights() {
 
 function AboutMe() {
   return (
-    <div className="bg-white py-24 sm:py-32" id="about">
+    <div className="border-t border-border-soft bg-bg-panel py-20 sm:py-28" id="about">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div>
-          <p className="text-base/7 font-semibold text-black">The TLDR</p>
-          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">A Bit About Me</h2>
-          <p className="mt-8 text-lg/8 text-black">
-          I’ve spent the last 10+ years in product marketing at technical B2B startups—AI/ML, data infrastructure, sales tech, no-code platforms. I’ve built the function from scratch a few times over, at a couple of companies that ended up getting acquired. These days I’m doing that same work at my current company, and using this space for everything else: writing, side projects, and whatever’s currently got my attention. I live in Seattle with my wife and three kids. When I’m not at a keyboard, I’m usually exploring the Pacific Northwest, playing Minecraft with my kids, or tinkering with whatever hobby I’ve picked up this month.
+          <p className="text-base/7 font-semibold text-accent-green">{'// about'}</p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-pretty text-text-primary sm:text-5xl">
+            A Bit About Me
+          </h2>
+          <p className="mt-5 max-w-3xl text-[17px]/[1.7] text-text-secondary">
+            I’ve spent the last 10+ years in product marketing at technical B2B startups—AI/ML, data infrastructure, sales tech, no-code platforms. I’ve built the function from scratch a few times over, at a couple of companies that ended up getting acquired. These days I’m doing that same work at my current company, and using this space for everything else: writing, side projects, and whatever’s currently got my attention. I live in Seattle with my wife and three kids. When I’m not at a keyboard, I’m usually exploring the Pacific Northwest, playing Minecraft with my kids, or tinkering with whatever hobby I’ve picked up this month.
           </p>
         </div>
-        <div className="mt-24">
+        <div className="mt-12 border-t border-border-soft pt-9">
           <LogoCloud />
         </div>
       </div>
@@ -268,61 +225,93 @@ function AboutMe() {
   )
 }
 
-function WhatICareAbout() {
-  const features = [
-    {
-      name: 'Create Order, Stay Flexible',
-      description: 'Ambiguity is part of the job. The key is finding a path forward and not being afraid to adjust when things change. Staying situationally aware and adapting as you go is what actually moves things forward.',
-      icon: Compass,
-    },
-    {
-      name: 'Less Ego, More Impact',
-      description: 'My focus is on what will make the most impact right now. Is it 10,000-foot strategy or finishing a slide deck for a critical sales call? Good work means going wherever you need to go to move the needle, regardless of what the task looks like.',
-      icon: Target,
-    },
-    {
-      name: 'Cross-Collaboration, Not Silos',
-      description: 'The best outcomes happen when product, engineering, sales, and marketing work together. Being the translator and connector between teams isn\'t extra work—it\'s how you get anything meaningful done. Working in a silo kills momentum.',
-      icon: Network,
-    },
-    {
-      name: 'Know What\'s Under The Hood',
-      description: 'Product in Product Marketing, is critical. Understanding how products actually work enables real conversations with technical teams and ultimately clearer GTM motions. You don\'t need to build it, but you should understand it well enough to represent it honestly.',
-      icon: Wrench,
-    },
-    {
-      name: 'Always Be Iterating',
-      description: 'Perfect doesn\'t exist, and waiting for it wastes time. Staying directionally correct and always iterating toward the goal is what works. Plant your flag, set a baseline, measure against it, and get 1% better every day. Progress compounds.',
-      icon: RefreshCw,
-    },
-    {
-      name: 'Authenticity Is Key',
-      description: 'Keeping it real matters, especially in the age of AI. Whether it\'s team communication, product launches, or content, people can tell when something\'s genuine versus generated. Authenticity builds trust and keeps us human.',
-      icon: Heart,
-    },
-  ]
+const features = [
+  {
+    name: 'Create Order, Stay Flexible',
+    description: 'Ambiguity is part of the job. The key is finding a path forward and not being afraid to adjust when things change. Staying situationally aware and adapting as you go is what actually moves things forward.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="#4ecf6c" strokeWidth="1.6" />
+        <path d="M15.5 8.5L13 13L8.5 15.5L11 11L15.5 8.5Z" fill="none" stroke="#4ecf6c" strokeWidth="1.4" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Less Ego, More Impact',
+    description: 'My focus is on what will make the most impact right now. Is it 10,000-foot strategy or finishing a slide deck for a critical sales call? Good work means going wherever you need to go to move the needle, regardless of what the task looks like.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="#4ecf6c" strokeWidth="1.6" />
+        <circle cx="12" cy="12" r="5" fill="none" stroke="#4ecf6c" strokeWidth="1.4" />
+        <circle cx="12" cy="12" r="1.6" fill="#4ecf6c" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Cross-Collaboration, Not Silos',
+    description: 'The best outcomes happen when product, engineering, sales, and marketing work together. Being the translator and connector between teams isn\'t extra work—it\'s how you get anything meaningful done. Working in a silo kills momentum.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <circle cx="6" cy="7" r="2" fill="none" stroke="#4ecf6c" strokeWidth="1.5" />
+        <circle cx="18" cy="7" r="2" fill="none" stroke="#4ecf6c" strokeWidth="1.5" />
+        <circle cx="12" cy="18" r="2" fill="none" stroke="#4ecf6c" strokeWidth="1.5" />
+        <path d="M7.7 8.4L11 16.3M16.3 8.4L13 16.3M8 7H16" stroke="#4ecf6c" strokeWidth="1.3" fill="none" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Know What\'s Under The Hood',
+    description: 'Product in Product Marketing, is critical. Understanding how products actually work enables real conversations with technical teams and ultimately clearer GTM motions. You don\'t need to build it, but you should understand it well enough to represent it honestly.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <path fill="#4ecf6c" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.5-3.5a6 6 0 01-7.8 7.8l-6.7 6.7a2.1 2.1 0 01-3-3l6.7-6.7a6 6 0 017.8-7.8l-3.5 3.5z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Always Be Iterating',
+    description: 'Perfect doesn\'t exist, and waiting for it wastes time. Staying directionally correct and always iterating toward the goal is what works. Plant your flag, set a baseline, measure against it, and get 1% better every day. Progress compounds.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <path d="M4 12a8 8 0 0114-5.3M20 4v5h-5" fill="none" stroke="#4ecf6c" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M20 12a8 8 0 01-14 5.3M4 20v-5h5" fill="none" stroke="#4ecf6c" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Authenticity Is Key',
+    description: 'Keeping it real matters, especially in the age of AI. Whether it\'s team communication, product launches, or content, people can tell when something\'s genuine versus generated. Authenticity builds trust and keeps us human.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <path fill="#4ecf6c" d="M12 20.5s-6.2-4-8.6-7.6C1.8 10.2 2.8 6.9 5.6 6c1.9-.6 3.5.3 4.9 1.8 1.3-1.5 3-2.4 4.9-1.8 2.8.9 3.8 4.2 2.2 6.9C18.2 16.5 12 20.5 12 20.5z" />
+      </svg>
+    ),
+  },
+]
 
+function WhatICareAbout() {
   return (
-    <div className="relative py-24 sm:py-32" id="what-i-care-about">
-      <Gradient className="absolute inset-0" />
-      <Container className="relative">
+    <div className="bg-bg-base py-20 sm:py-28" id="what-i-care-about">
+      <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-black">My Philosophy</h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-          Principles That Guide My Work
+          <h2 className="text-base/7 font-semibold text-accent-green">{'// principles'}</h2>
+          <p className="mt-3 text-4xl font-semibold tracking-tight text-pretty text-text-primary sm:text-5xl">
+            Principles That Guide My Work
           </p>
         </div>
-        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 text-black sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16">
+        <div className="mt-9 grid grid-cols-1 gap-px overflow-hidden rounded-[10px] border border-border-soft bg-border-soft sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <div key={feature.name} className="relative pl-9">
-              <dt className="block mb-2 text-lg font-semibold text-black">
-                <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text-black" />
+            <div key={feature.name} className="bg-bg-panel p-7">
+              {feature.icon}
+              <h3 className="mt-4 text-[17px] font-semibold text-text-primary">
                 {feature.name}
-              </dt>
-              <dd className="block">{feature.description}</dd>
+              </h3>
+              <p className="mt-2.5 text-[14.5px]/[1.6] text-text-tertiary">
+                {feature.description}
+              </p>
             </div>
           ))}
-        </dl>
+        </div>
       </Container>
     </div>
   )
@@ -330,7 +319,7 @@ function WhatICareAbout() {
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-bg-base">
       <Hero />
       <AboutMe />
       <WhatICareAbout />

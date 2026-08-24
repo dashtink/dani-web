@@ -1,10 +1,17 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
-import { Red_Hat_Display } from 'next/font/google'
+import { JetBrains_Mono, Red_Hat_Display } from 'next/font/google'
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ['latin'],
   variable: '--font-red-hat-display',
+  display: 'swap',
+})
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 })
 
@@ -73,17 +80,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={redHatDisplay.variable}>
+    <html lang="en" className={`${redHatDisplay.variable} ${jetBrainsMono.variable}`}>
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
         <link rel="shortcut icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#0a0f0c" />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body className="text-black antialiased">
+      <body className="bg-bg-base text-text-primary antialiased">
         {children}
       </body>
     </html>

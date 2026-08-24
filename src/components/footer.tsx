@@ -1,29 +1,25 @@
-import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
 import { Button } from './button'
 import { Container } from './container'
-import { Gradient } from './gradient'
 import { Link } from './link'
 import { Logo } from './logo'
 
 function CallToAction() {
   return (
-    <div className="relative pt-20 pb-16 text-center sm:py-24">
-      <hgroup>
-        <h2 className="text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl">
-          Connect With Me
-        </h2>
-      </hgroup>
-      <p className="mx-auto mt-8 max-w-lg text-lg/8 text-black">
+    <div className="pt-20 pb-14 text-center sm:pt-24">
+      <h2 className="text-4xl font-semibold tracking-tight text-pretty text-text-primary sm:text-5xl">
+        Connect With Me
+      </h2>
+      <p className="mx-auto mt-5 max-w-md text-lg/8 text-text-secondary">
         Always happy to talk product marketing, trade notes on a side project, or just catch up.
       </p>
-      <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button className="w-full sm:w-auto" href="https://cal.com/dani-kellogg/30min" target="_blank">
+      <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row">
+        <Button href="https://cal.com/dani-kellogg/30min" target="_blank">
           Let’s Chat
         </Button>
         <a
           href="https://linkedin.com/in/dashkellogg"
           target="_blank"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:text-gray-700 transition-colors"
+          className="text-[15px] font-semibold text-text-primary hover:text-accent-green"
         >
           Connect on LinkedIn
         </a>
@@ -33,21 +29,23 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-black/50">{children}</h3>
+  return (
+    <h3 className="font-mono text-[11.5px] font-medium tracking-[0.04em] text-text-quaternary uppercase">
+      {children}
+    </h3>
+  )
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
-  return <ul className="mt-6 space-y-4 text-sm/6">{children}</ul>
+  return <div className="mt-4 flex flex-col gap-[11px]">{children}</div>
 }
 
 function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
   return (
-    <li>
-      <Link
-        {...props}
-        className="font-medium text-black data-hover:text-black/75"
-      />
-    </li>
+    <Link
+      {...props}
+      className="text-[13.5px] font-semibold text-text-quote hover:text-accent-green"
+    />
   )
 }
 
@@ -84,7 +82,6 @@ function Sitemap() {
   )
 }
 
-
 function SocialIconLinkedIn(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 16 16" fill="currentColor" {...props}>
@@ -101,6 +98,14 @@ function SocialIconGitHub(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function SocialIconSubstack(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="currentColor" {...props}>
+      <path d="M1.5 2h13v2h-13V2zm0 3.2h13V7H8.4L1.5 11V5.2zm0 7.4l6.9-4H14.5v1.4H8.4l-6.9 4v-1.4z" />
+    </svg>
+  )
+}
+
 function SocialLinks() {
   return (
     <>
@@ -108,17 +113,25 @@ function SocialLinks() {
         href="https://github.com/dashtink"
         target="_blank"
         aria-label="View Dani's GitHub profile"
-        className="text-black data-hover:text-black/75"
+        className="text-text-quote hover:text-accent-green"
       >
-        <SocialIconGitHub className="size-4" />
+        <SocialIconGitHub className="size-[17px]" />
       </Link>
       <Link
         href="https://linkedin.com/in/dashkellogg"
         target="_blank"
         aria-label="Connect with Dani on LinkedIn"
-        className="text-black data-hover:text-black/75"
+        className="text-text-quote hover:text-accent-green"
       >
-        <SocialIconLinkedIn className="size-4" />
+        <SocialIconLinkedIn className="size-[17px]" />
+      </Link>
+      <Link
+        href="https://supercrisp.substack.com/"
+        target="_blank"
+        aria-label="Read Dani's Substack"
+        className="text-text-quote hover:text-accent-green"
+      >
+        <SocialIconSubstack className="size-[17px]" />
       </Link>
     </>
   )
@@ -126,52 +139,33 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-black">
+    <p className="font-mono text-[12.5px] text-text-quaternary">
       &copy; {new Date().getFullYear()} Dani Kellogg. All rights reserved.
-    </div>
+    </p>
   )
 }
 
 export function Footer() {
   return (
-    <footer>
-      <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/80" />
-        <Container>
-          <CallToAction />
-          <PlusGrid className="pb-16">
-            <PlusGridRow>
-              <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-                <div className="col-span-2 flex">
-                  <PlusGridItem className="pt-6 lg:pb-6">
-                    <Logo className="h-9" />
-                    <p className="mt-4 max-w-sm text-sm/6 text-black">
-                      I’m based in Seattle with my wife and three kids. I’m a tinkerer at heart and love learning how things work, whether that’s building AI agents, creative writing or sourdough fermentation. In another life I’d probably be a mad scientist.
-                    </p>
-                  </PlusGridItem>
-                </div>
-                <div className="col-span-2 flex justify-end lg:col-span-4 lg:pt-6">
-                  <div className="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-3">
-                    <Sitemap />
-                  </div>
-                </div>
-              </div>
-            </PlusGridRow>
-            <PlusGridRow className="flex justify-between">
-              <div>
-                <PlusGridItem className="py-3">
-                  <Copyright />
-                </PlusGridItem>
-              </div>
-              <div className="flex">
-                <PlusGridItem className="flex items-center gap-8 py-3">
-                  <SocialLinks />
-                </PlusGridItem>
-              </div>
-            </PlusGridRow>
-          </PlusGrid>
-        </Container>
-      </Gradient>
+    <footer className="relative border-t border-border-soft bg-[radial-gradient(rgba(78,207,108,0.14)_1px,transparent_1px)] [background-size:22px_22px]">
+      <Container>
+        <CallToAction />
+        <div className="grid grid-cols-1 gap-9 border-t border-border-soft py-11 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+          <div className="max-w-xs">
+            <Logo />
+            <p className="mt-3.5 text-[13.5px] leading-relaxed text-text-tertiary">
+              I’m based in Seattle with my wife and three kids. I’m a tinkerer at heart, whether that’s building AI agents, creative writing or sourdough fermentation.
+            </p>
+          </div>
+          <Sitemap />
+        </div>
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border-soft py-6">
+          <Copyright />
+          <div className="flex gap-5">
+            <SocialLinks />
+          </div>
+        </div>
+      </Container>
     </footer>
   )
 }
