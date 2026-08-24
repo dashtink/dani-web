@@ -17,8 +17,8 @@ function Hero() {
     <div className="relative bg-[radial-gradient(rgba(78,207,108,0.16)_1px,transparent_1px)] [background-size:22px_22px]">
       <Container className="relative">
         <Navbar />
-        <div className="flex flex-wrap items-center gap-11 py-[clamp(56px,8vw,96px)]">
-          <div className="max-w-xl flex-1">
+        <div className="py-[clamp(56px,8vw,96px)] lg:flex lg:items-center lg:gap-11">
+          <div className="max-w-xl lg:flex-1">
             <div className="inline-flex items-center gap-2 rounded border border-[rgba(78,207,108,0.4)] bg-[rgba(78,207,108,0.08)] px-3 py-1.5">
               <span className="size-1.5 rounded-full bg-accent-green" aria-hidden="true" />
               <span className="font-mono text-[12.5px] text-[#8fe6a2]">
@@ -43,7 +43,7 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="w-[min(280px,100%)] flex-none overflow-hidden rounded-xl border border-border-strong">
+          <div className="mx-auto mt-10 w-[min(280px,100%)] overflow-hidden rounded-xl border border-border-strong lg:mx-0 lg:mt-0 lg:w-[min(280px,100%)] lg:flex-none">
             <img
               alt=""
               src="/dani-3.png"
