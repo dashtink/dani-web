@@ -47,7 +47,7 @@ function Hero() {
             <img
               alt=""
               src="/dani-3.jpg"
-              className="aspect-[3/4] w-full object-cover grayscale-[35%] contrast-[1.05]"
+              className="aspect-[3/4] w-full object-cover"
             />
           </div>
         </div>

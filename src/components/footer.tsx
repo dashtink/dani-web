@@ -58,7 +58,7 @@ function Sitemap() {
           <SitemapLink href="#about">About</SitemapLink>
           <SitemapLink href="#career-highlights">Career Highlights</SitemapLink>
           <SitemapLink href="#what-i-care-about">What I Care About</SitemapLink>
-          <SitemapLink href="#writing">Writing</SitemapLink>
+          <SitemapLink href="#writing">Writing & Speaking</SitemapLink>
           <SitemapLink href="#testimonials">What People Say</SitemapLink>
         </SitemapLinks>
       </div>

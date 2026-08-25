@@ -54,7 +54,7 @@ export function Writing() {
     <div className="border-t border-border-soft bg-bg-panel py-20 sm:py-28" id="writing">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-accent-green">{'// writing'}</h2>
+          <h2 className="text-base/7 font-semibold text-accent-green">{'// writing & speaking'}</h2>
           <p className="mt-3 text-4xl font-semibold tracking-tight text-pretty text-text-primary sm:text-5xl">
             Notes on Product Marketing & Whatever Else
           </p>
