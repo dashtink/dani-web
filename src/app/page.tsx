@@ -5,12 +5,13 @@ import { Testimonials } from '@/components/testimonials'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Button } from '@/components/button'
 
-const stats = [
-  { value: '10+', label: 'years in PMM' },
-  { value: '4', label: 'startups built 0→1' },
-  { value: '2', label: 'acquisitions' },
-  { value: 'AI/ML', label: '+ data infra focus' },
-]
+// Stat bar hidden for now -- restore this array and the grid below in Hero to bring it back.
+// const stats = [
+//   { value: '10+', label: 'years in PMM' },
+//   { value: '4', label: 'startups built 0→1' },
+//   { value: '2', label: 'acquisitions' },
+//   { value: 'AI/ML', label: '+ data infra focus' },
+// ]
 
 function Hero() {
   return (
@@ -43,7 +44,7 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="mx-auto mt-10 w-[min(300px,100%)] overflow-hidden rounded-xl border border-border-strong lg:mx-0 lg:mt-0 lg:w-[min(380px,100%)] lg:flex-none">
+          <div className="mx-auto mt-10 w-full max-w-md overflow-hidden rounded-xl border border-border-strong lg:mx-0 lg:mt-0 lg:w-[440px] lg:max-w-none lg:flex-none xl:w-[520px]">
             <img
               alt=""
               src="/dani-3.jpg"
@@ -52,16 +53,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mb-[clamp(48px,6vw,72px)] grid grid-cols-2 divide-x divide-y divide-border-default overflow-hidden rounded-lg border border-border-default sm:grid-cols-4 sm:divide-y-0">
-          {stats.map((stat) => (
-            <div key={stat.label} className="px-6 py-[22px]">
-              <div className="font-mono text-2xl font-semibold text-accent-green">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-[13px] text-text-tertiary">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        {/* Stat bar hidden for now -- see commented-out `stats` array above */}
       </Container>
     </div>
   )
