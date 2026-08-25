@@ -14,6 +14,7 @@ const links = [
   { href: '#about', label: 'about' },
   { href: '#career-highlights', label: 'work' },
   { href: '#what-i-care-about', label: 'principles' },
+  { href: '#writing', label: 'writing' },
   { href: '#testimonials', label: 'testimonials' },
 ]
 

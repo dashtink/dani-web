@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 import { Testimonials } from '@/components/testimonials'
 import { LogoCloud } from '@/components/logo-cloud'
+import { Writing } from '@/components/writing'
 import { Button } from '@/components/button'
 
 // Stat bar hidden for now -- restore this array and the grid below in Hero to bring it back.
@@ -35,9 +36,7 @@ function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button href="#career-highlights">See My Work</Button>
               <a
-                href="https://supercrisp.substack.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#writing"
                 className="rounded-md border border-border-strong px-[22px] py-3 text-[15px] font-semibold text-text-primary hover:bg-white/5"
               >
                 Read My Writing <span aria-hidden="true">→</span>
@@ -318,7 +317,8 @@ export default function Home() {
       <main>
         <WorkHighlights />
         <Testimonials />
-        {/* Writing and Projects sections are hidden until Substack and real project pages are ready */}
+        <Writing />
+        {/* Projects section hidden until real project pages are ready */}
       </main>
       <Footer />
     </div>

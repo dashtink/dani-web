@@ -1,20 +1,21 @@
-const substackPlaceholders = [
-  {
-    id: 'placeholder-1',
-    title: 'Post title coming soon',
-    blurb: 'A new post will show up here once it is published.',
-  },
-  {
-    id: 'placeholder-2',
-    title: 'Post title coming soon',
-    blurb: 'A new post will show up here once it is published.',
-  },
-  {
-    id: 'placeholder-3',
-    title: 'Post title coming soon',
-    blurb: 'A new post will show up here once it is published.',
-  },
-]
+// "Latest from Substack" placeholder block hidden for now -- restore this array and the grid in Writing to bring it back.
+// const substackPlaceholders = [
+//   {
+//     id: 'placeholder-1',
+//     title: 'Post title coming soon',
+//     blurb: 'A new post will show up here once it is published.',
+//   },
+//   {
+//     id: 'placeholder-2',
+//     title: 'Post title coming soon',
+//     blurb: 'A new post will show up here once it is published.',
+//   },
+//   {
+//     id: 'placeholder-3',
+//     title: 'Post title coming soon',
+//     blurb: 'A new post will show up here once it is published.',
+//   },
+// ]
 
 const pastWriting = [
   {
@@ -26,10 +27,10 @@ const pastWriting = [
   },
   {
     id: 2,
-    title: 'Introducing CastorDoc AI 2.0',
-    href: 'https://www.castordoc.com/blog/introducing-castordoc-ai-2-0',
-    company: 'CastorDoc',
-    label: 'PRODUCT_BLOG',
+    title: 'AI: The Age of Synthesis',
+    href: 'https://www.aiacceleratorinstitute.com/ai-the-age-of-synthesis/',
+    company: 'AI Accelerator Institute',
+    label: 'THOUGHT_LEADERSHIP',
   },
   {
     id: 3,
@@ -59,50 +60,19 @@ export function Writing() {
           </p>
           <p className="mt-4 text-lg/8 text-text-secondary">
             I write on Substack about product marketing, technical B2B, and
-            whatever else has my attention. New posts will show up here as
-            they’re published.
-          </p>
-        </div>
-
-        <div className="mt-12">
-          <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <h3 className="text-lg font-semibold text-text-primary">
-              Latest from Substack
-            </h3>
+            whatever else has my attention.{' '}
             <a
               href="https://supercrisp.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[13.5px] font-semibold text-accent-green hover:text-[#7fe89a]"
+              className="font-semibold text-accent-green hover:text-[#7fe89a]"
             >
-              Read on Substack <span aria-hidden="true">→</span>
+              Read it here <span aria-hidden="true">→</span>
             </a>
-          </div>
-          <div className="mt-5 grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {substackPlaceholders.map((post) => (
-              <div
-                key={post.id}
-                className="flex min-h-[210px] flex-col overflow-hidden rounded-xl border border-border-default bg-bg-base"
-              >
-                <div className="aspect-video bg-[radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px),linear-gradient(90deg,#4ecf6c,#0f7a45)] [background-size:22px_22px,100%_100%]" />
-                <div className="flex flex-1 flex-col justify-between p-6">
-                  <div>
-                    <TagChip>COMING_SOON</TagChip>
-                    <h4 className="mt-3.5 text-[16.5px] font-semibold text-text-primary">
-                      {post.title}
-                    </h4>
-                    <p className="mt-2.5 text-[13.5px] text-text-tertiary">{post.blurb}</p>
-                  </div>
-                  <p className="mt-4 text-[13.5px] font-semibold text-text-quote">
-                    Read on Substack →
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          </p>
         </div>
 
-        <div className="mt-14">
+        <div className="mt-12">
           <h3 className="text-lg font-semibold text-text-primary">
             Past Writing & Speaking
           </h3>
