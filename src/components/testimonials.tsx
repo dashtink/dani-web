@@ -5,7 +5,7 @@ const testimonials = [
     name: 'Arielle Jendruh',
     title: 'Market Intelligence Leader, Qualtrics',
     quote:
-      "Dani is one of the most AI-literate people I've worked with -- she can go deeply technical but also knows how to translate that for people who don't live in that world, and she does it without ever making anyone feel behind. On the contrary, her curiosity, tenacity, and desire to build is infectious, and makes others want to level up alongside her. Recently, over a single weekend, Dani built herself an entire personal knowledge system -- a mix of markdown tools, Claude, and integrations -- to have an ever-growing AI brain she could pull from anytime. Dani doesn't just talk about ideas; she goes and builds them. She's also a genuinely collaborative, generous person who I felt lucky to work with.",
+      "Dani is one of the most AI-literate people I've worked with, she can go deeply technical but also knows how to translate that for people who don't live in that world. Her curiosity, tenacity, and desire to build is infectious, and makes others want to level up alongside her. Dani doesn't just talk about ideas, she goes and builds them. She's also a genuinely collaborative, generous person who I felt lucky to work with.",
   },
   {
     name: 'Xavier de Boisredon',
