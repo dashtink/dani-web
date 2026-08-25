@@ -16,7 +16,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dani-web.pages.dev'),
+  metadataBase: new URL('https://danikellogg.com'),
   title: {
     template: '%s - Dani Kellogg',
     default: 'Dani Kellogg',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://dani-web.pages.dev',
+    url: 'https://danikellogg.com',
     siteName: 'Dani Kellogg',
     title: 'Dani Kellogg',
     description: 'Product marketer, writer, and occasional builder based in Seattle. Notes on product marketing and technical B2B, plus small side projects.',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     creator: '@dashkellogg',
   },
   alternates: {
-    canonical: 'https://dani-web.pages.dev',
+    canonical: 'https://danikellogg.com',
   },
   category: 'Business',
 }
