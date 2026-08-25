@@ -43,10 +43,10 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="mx-auto mt-10 w-[min(280px,100%)] overflow-hidden rounded-xl border border-border-strong lg:mx-0 lg:mt-0 lg:w-[min(280px,100%)] lg:flex-none">
+          <div className="mx-auto mt-10 w-[min(300px,100%)] overflow-hidden rounded-xl border border-border-strong lg:mx-0 lg:mt-0 lg:w-[min(380px,100%)] lg:flex-none">
             <img
               alt=""
-              src="/dani-3.png"
+              src="/dani-3.jpg"
               className="aspect-[3/4] w-full object-cover grayscale-[35%] contrast-[1.05]"
             />
           </div>
