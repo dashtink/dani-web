@@ -1,24 +1,12 @@
-'use client'
-
-import * as Headless from '@headlessui/react'
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
-import { clsx } from 'clsx'
-import {
-  MotionValue,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  type HTMLMotionProps,
-} from 'framer-motion'
-import { useCallback, useLayoutEffect, useRef, useState } from 'react'
-import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from './container'
-import { Gradient } from './gradient'
-import { Link } from './link'
-import { Heading } from './text'
 
 const testimonials = [
+  {
+    name: 'Arielle Jendruh',
+    title: 'Market Intelligence Leader, Qualtrics',
+    quote:
+      "Dani is one of the most AI-literate people I've worked with -- she can go deeply technical but also knows how to translate that for people who don't live in that world, and she does it without ever making anyone feel behind. On the contrary, her curiosity, tenacity, and desire to build is infectious, and makes others want to level up alongside her. Recently, over a single weekend, Dani built herself an entire personal knowledge system -- a mix of markdown tools, Claude, and integrations -- to have an ever-growing AI brain she could pull from anytime. Dani doesn't just talk about ideas; she goes and builds them. She's also a genuinely collaborative, generous person who I felt lucky to work with.",
+  },
   {
     name: 'Xavier de Boisredon',
     title: 'Co-Founder & COO at CastorDoc (now Catalog by Coalesce)',
@@ -60,177 +48,52 @@ const testimonials = [
     quote:
       'Dani is an extremely talented marketer who can handle anything you throw at them. They\'re thoughtful in their approach and do a great job of bringing even the most granular product details to bear on the broader story you\'re trying to tell in market. I\'d jump at the chance to work with them again!',
   },
-
   {
     name: 'Tim Hinds',
     title: 'Tech Product Marketing Leader',
     quote:
       'Dani\'s an incredibly resourceful and effective product marketer of technical products. Having worked at startups for so long, Dani can actually execute on everything from strategy and research to content and design. Truly a fullstack product marketer.',
   },
-  
 ]
 
-function TestimonialCard({
-  name,
-  title,
-  img,
-  children,
-  bounds,
-  scrollX,
-  ...props
-}: {
-  img: string
-  name: string
-  title: string
-  children: React.ReactNode
-  bounds: RectReadOnly
-  scrollX: MotionValue<number>
-} & HTMLMotionProps<'div'>) {
-  let ref = useRef<HTMLDivElement | null>(null)
-
-  let computeOpacity = useCallback(() => {
-    let element = ref.current
-    if (!element || bounds.width === 0) return 1
-
-    let rect = element.getBoundingClientRect()
-
-    if (rect.left < bounds.left) {
-      let diff = bounds.left - rect.left
-      let percent = diff / rect.width
-      return Math.max(0.5, 1 - percent)
-    } else if (rect.right > bounds.right) {
-      let diff = rect.right - bounds.right
-      let percent = diff / rect.width
-      return Math.max(0.5, 1 - percent)
-    } else {
-      return 1
-    }
-  }, [ref, bounds.width, bounds.left, bounds.right])
-
-  let opacity = useSpring(computeOpacity(), {
-    stiffness: 154,
-    damping: 23,
-  })
-
-  useLayoutEffect(() => {
-    opacity.set(computeOpacity())
-  }, [computeOpacity, opacity])
-
-  useMotionValueEvent(scrollX, 'change', () => {
-    opacity.set(computeOpacity())
-  })
-
-  return (
-    <motion.div
-      ref={ref}
-      style={{ opacity }}
-      {...props}
-      className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 rounded-3xl" />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 rounded-3xl ring-1 ring-gray-950/10 ring-inset"
-      />
-      <figure className="relative p-10">
-        <blockquote>
-          <p className="relative text-xl/7 text-black">
-            <span aria-hidden="true" className="absolute -translate-x-full">
-              "
-            </span>
-            {children}
-            <span aria-hidden="true" className="absolute">
-              "
-            </span>
-          </p>
-        </blockquote>
-        <figcaption className="mt-6 border-t border-black/20 pt-6">
-          <p className="text-sm/6 font-medium text-black">{name}</p>
-          <p className="text-sm/6 font-medium text-black">
-            {title}
-          </p>
-        </figcaption>
-      </figure>
-    </motion.div>
-  )
-}
-
-function CallToAction() {
-  return (
-    <div>
-    </div>
-  )
-}
-
 export function Testimonials() {
-  let scrollRef = useRef<HTMLDivElement | null>(null)
-  let { scrollX } = useScroll({ container: scrollRef })
-  let [setReferenceWindowRef, bounds] = useMeasure()
-  let [activeIndex, setActiveIndex] = useState(0)
-
-  useMotionValueEvent(scrollX, 'change', (x) => {
-    setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth))
-  })
-
-  function scrollTo(index: number) {
-    let gap = 32
-    let width = (scrollRef.current!.children[0] as HTMLElement).offsetWidth
-    scrollRef.current!.scrollTo({ left: (width + gap) * index })
-  }
-
   return (
-    <div className="relative overflow-hidden py-16 sm:py-24" id="testimonials">
-      <Gradient className="absolute inset-0" />
+    <div
+      className="relative overflow-hidden border-t border-border-soft bg-[radial-gradient(rgba(78,207,108,0.14)_1px,transparent_1px)] py-20 [background-size:22px_22px]"
+      id="testimonials"
+    >
       <Container className="relative">
-        <div ref={setReferenceWindowRef}>
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-base/7 font-semibold text-accent-green">
+            {'// testimonials'}
+          </h2>
+          <p className="mt-3 text-4xl font-semibold tracking-tight text-pretty text-text-primary sm:text-5xl">
+            Kind Words From People I’ve Worked With
+          </p>
         </div>
       </Container>
       <div
-        ref={scrollRef}
-        className={clsx([
-          'mt-16 flex gap-8 px-(--scroll-padding)',
+        className={[
+          'mt-10 flex gap-5 overflow-x-auto px-(--scroll-padding) pt-1 pb-4',
           '[scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
-          'snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth',
+          'snap-x snap-mandatory scroll-smooth',
           '[--scroll-padding:max(--spacing(6),calc((100vw-(var(--container-2xl)))/2))] lg:[--scroll-padding:max(--spacing(8),calc((100vw-(var(--container-7xl)))/2))]',
-        ])}
+        ].join(' ')}
       >
-        {testimonials.map(({ name, title, quote }, testimonialIndex) => (
-          <TestimonialCard
-            key={testimonialIndex}
-            name={name}
-            title={title}
-            img=""
-            bounds={bounds}
-            scrollX={scrollX}
-            onClick={() => scrollTo(testimonialIndex)}
+        {testimonials.map(({ name, title, quote }) => (
+          <div
+            key={name}
+            className="flex min-h-[270px] w-80 shrink-0 snap-start flex-col justify-between rounded-xl border border-border-default bg-bg-panel p-7"
           >
-            {quote}
-          </TestimonialCard>
-        ))}
-        <div className="w-2xl shrink-0 sm:w-216" />
-      </div>
-      <Container className="mt-16">
-        <div className="flex justify-between">
-          <CallToAction />
-          <div className="hidden sm:flex sm:gap-2">
-            {testimonials.map(({ name }, testimonialIndex) => (
-              <Headless.Button
-                key={testimonialIndex}
-                onClick={() => scrollTo(testimonialIndex)}
-                data-active={
-                  activeIndex === testimonialIndex ? true : undefined
-                }
-                aria-label={`Scroll to testimonial from ${name}`}
-                className={clsx(
-                  'size-2.5 rounded-full border border-transparent bg-gray-300 transition',
-                  'data-active:bg-gray-400 data-hover:bg-gray-400',
-                  'forced-colors:data-active:bg-[Highlight] forced-colors:data-focus:outline-offset-4',
-                )}
-              />
-            ))}
+            <p className="text-base/[1.55] text-text-quote">&quot;{quote}&quot;</p>
+            <div className="mt-5 border-t border-border-default pt-4.5">
+              <p className="text-[13.5px] font-bold text-text-primary">{name}</p>
+              <p className="mt-0.5 text-[12.5px] text-text-tertiary">{title}</p>
+            </div>
           </div>
-        </div>
-      </Container>
+        ))}
+        <div className="w-2 shrink-0" aria-hidden="true" />
+      </div>
     </div>
   )
 }

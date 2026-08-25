@@ -35,3 +35,6 @@ next-env.d.ts
 
 # Sanity
 sanity-typegen.json
+
+# Local Claude Code tool config
+.claude/

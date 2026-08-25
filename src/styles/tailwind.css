@@ -1,9 +1,24 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: "Red Hat Display", system-ui, sans-serif;
+  --font-sans: var(--font-red-hat-display), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
   --radius-4xl: 2rem;
+
+  --color-bg-base: #0a0f0c;
+  --color-bg-panel: #0d1310;
+  --color-border-soft: rgba(255, 255, 255, 0.08);
+  --color-border-default: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a9b8ae;
+  --color-text-tertiary: #8fa398;
+  --color-text-quaternary: #6f8177;
+  --color-text-quote: #c7d2c9;
+  --color-accent-green: #4ecf6c;
+  --color-accent-green-deep: #0f7a45;
+  --color-accent-on-green: #06210f;
 }
 
 @keyframes move-x {

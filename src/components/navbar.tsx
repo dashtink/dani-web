@@ -9,28 +9,21 @@ import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
-import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
-  const links = [
-    { href: '#what-i-bring', label: 'What I Bring' },
-    { href: '#selected-work', label: 'Selected Work' },
-    { href: '#what-i-care-about', label: 'What I Care About' },
-    { href: '#content-thought-leadership', label: 'Content' },
-    { href: '#testimonials', label: 'References' },
-  ]
+const links = [
+  { href: '#about', label: 'about' },
+  { href: '#career-highlights', label: 'work' },
+  { href: '#what-i-care-about', label: 'principles' },
+  { href: '#testimonials', label: 'testimonials' },
+]
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden lg:flex">
+    <nav className="relative hidden flex-wrap items-center gap-x-[clamp(14px,2vw,26px)] gap-y-2 font-mono text-[12.5px] text-text-tertiary lg:flex">
       {links.map(({ href, label }) => (
-        <PlusGridItem key={href} className="relative flex">
-          <Link
-            href={href}
-            className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/2.5"
-          >
-            {label}
-          </Link>
-        </PlusGridItem>
+        <Link key={href} href={href} className="text-text-tertiary hover:text-text-primary">
+          {label}
+        </Link>
       ))}
     </nav>
   )
@@ -39,7 +32,7 @@ function DesktopNav() {
 function MobileNavButton() {
   return (
     <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-hover:bg-black/5 lg:hidden"
+      className="flex size-12 items-center justify-center self-center rounded-lg text-text-primary data-hover:bg-white/5 lg:hidden"
       aria-label="Open main menu"
     >
       <Bars2Icon className="size-6" />
@@ -49,8 +42,8 @@ function MobileNavButton() {
 
 function MobileNav() {
   return (
-    <DisclosurePanel className="lg:hidden">
-      <div className="flex flex-col gap-6 py-4">
+    <DisclosurePanel className="border-t border-border-soft lg:hidden">
+      <div className="flex flex-col gap-6 px-6 py-6 font-mono text-sm text-text-tertiary">
         {links.map(({ href, label }, linkIndex) => (
           <motion.div
             initial={{ opacity: 0, rotateX: -90 }}
@@ -62,15 +55,11 @@ function MobileNav() {
             }}
             key={href}
           >
-            <Link href={href} className="text-base font-medium text-gray-950">
+            <Link href={href} className="text-text-tertiary hover:text-text-primary">
               {label}
             </Link>
           </motion.div>
         ))}
-      </div>
-      <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="absolute inset-x-0 top-0 border-t border-black/5" />
-        <div className="absolute inset-x-0 top-2 border-t border-black/5" />
       </div>
     </DisclosurePanel>
   )
@@ -78,25 +67,19 @@ function MobileNav() {
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
-    <Disclosure as="header" className="pt-12 sm:pt-16">
-      <PlusGrid>
-        <PlusGridRow className="relative flex justify-between">
-          <div className="relative flex gap-6">
-            <PlusGridItem className="py-3">
-              <Link href="/" title="Home">
-                <Logo className="h-9" />
-              </Link>
-            </PlusGridItem>
-            {banner && (
-              <div className="relative hidden items-center py-3 lg:flex">
-                {banner}
-              </div>
-            )}
-          </div>
-          <DesktopNav />
-          <MobileNavButton />
-        </PlusGridRow>
-      </PlusGrid>
+    <Disclosure as="header">
+      <div className="flex items-center justify-between gap-4 border-b border-border-soft py-[clamp(24px,3vw,32px)]">
+        <div className="flex items-center gap-6">
+          <Link href="/" title="Home">
+            <Logo />
+          </Link>
+          {banner && (
+            <div className="hidden items-center lg:flex">{banner}</div>
+          )}
+        </div>
+        <DesktopNav />
+        <MobileNavButton />
+      </div>
       <MobileNav />
     </Disclosure>
   )

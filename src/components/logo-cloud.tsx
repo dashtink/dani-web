@@ -1,5 +1,9 @@
 import { clsx } from 'clsx'
 
+const logoClassName = 'h-7 max-sm:mx-auto invert grayscale opacity-55'
+// Already a white/monochrome mark, so it doesn't need the invert treatment the colored logos do.
+const whiteLogoClassName = 'h-7 max-sm:mx-auto opacity-55'
+
 export function LogoCloud({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
@@ -7,34 +11,15 @@ export function LogoCloud({
     <div
       className={clsx(
         className,
-        'flex justify-between max-sm:mx-auto max-sm:max-w-md max-sm:flex-wrap max-sm:justify-evenly max-sm:gap-x-4 max-sm:gap-y-4',
+        'flex flex-wrap justify-between gap-x-6 gap-y-4 max-sm:mx-auto max-sm:max-w-md max-sm:justify-evenly',
       )}
     >
-      <img
-        alt="SavvyCal"
-        src="/logo-cloud/knack.svg"
-        className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-      />
-      <img
-        alt="Laravel"
-        src="/logo-cloud/mode.svg"
-        className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-      />
-      <img
-        alt="Tuple"
-        src="/logo-cloud/castordoc.svg"
-        className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-      />
-      <img
-        alt="Transistor"
-        src="/logo-cloud/leadiq.svg"
-        className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-      />
-      <img
-        alt="Statamic"
-        src="/logo-cloud/wallaroo.svg"
-        className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-      />
+      <img alt="Knack" src="/logo-cloud/knack.svg" className={logoClassName} />
+      <img alt="Mode" src="/logo-cloud/mode.svg" className={logoClassName} />
+      <img alt="CastorDoc" src="/logo-cloud/castordoc.svg" className={logoClassName} />
+      <img alt="LeadIQ" src="/logo-cloud/leadiq.svg" className={logoClassName} />
+      <img alt="Wallaroo" src="/logo-cloud/wallaroo.svg" className={logoClassName} />
+      <img alt="Qualtrics" src="/logo-cloud/qualtrics.svg" className={whiteLogoClassName} />
     </div>
   )
 }
