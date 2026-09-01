@@ -11,7 +11,7 @@ const testimonials = [
     name: 'Nicole Caven',
     title: 'Senior Product Marketing & Go-to-Market Leader, Qualtrics',
     quote:
-      "I had the opportunity to work with Dani, and she is one of the most technically curious and fearless PMMs I've worked with. She is never afraid to ask the hard question, challenge conventional thinking, or dig several layers deeper to understand the product, customer, or problem. She brings a strong focus on impact and is at her best when she can really dig into a problem, follow her curiosity, and do thoughtful, high quality work. In the era of AI-powered PMM, these qualities matter more than ever: technical depth, curiosity, critical thinking, and the courage to challenge the status quo. Dani is already leading the pack. I'd be excited to work with her again and highly recommend her to any team looking for a smart, curious, technically strong PMM who isn't afraid to make things better.",
+      "I had the opportunity to work with Dani, and she is one of the most technically curious and fearless PMMs I've worked with. She is never afraid to ask the hard question, challenge conventional thinking, or dig several layers deeper to understand the product, customer, or problem. She brings a strong focus on impact and is at her best when she can really dig into a problem, follow her curiosity, and do thoughtful, high quality work.",
   },
   {
     name: 'Xavier de Boisredon',
