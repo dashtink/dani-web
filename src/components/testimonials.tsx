@@ -8,6 +8,12 @@ const testimonials = [
       "Dani is one of the most AI-literate people I've worked with, she can go deeply technical but also knows how to translate that for people who don't live in that world. Her curiosity, tenacity, and desire to build is infectious, and makes others want to level up alongside her. Dani doesn't just talk about ideas, she goes and builds them. She's also a genuinely collaborative, generous person who I felt lucky to work with.",
   },
   {
+    name: 'Nicole Caven',
+    title: 'Senior Product Marketing & Go-to-Market Leader, Qualtrics',
+    quote:
+      "I had the opportunity to work with Dani, and she is one of the most technically curious and fearless PMMs I've worked with. She is never afraid to ask the hard question, challenge conventional thinking, or dig several layers deeper to understand the product, customer, or problem. She brings a strong focus on impact and is at her best when she can really dig into a problem, follow her curiosity, and do thoughtful, high quality work. In the era of AI-powered PMM, these qualities matter more than ever: technical depth, curiosity, critical thinking, and the courage to challenge the status quo. Dani is already leading the pack. I'd be excited to work with her again and highly recommend her to any team looking for a smart, curious, technically strong PMM who isn't afraid to make things better.",
+  },
+  {
     name: 'Xavier de Boisredon',
     title: 'Co-Founder & COO at CastorDoc (now Catalog by Coalesce)',
     quote:

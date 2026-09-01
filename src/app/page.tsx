@@ -76,11 +76,11 @@ const workHighlights: WorkHighlightData[] = [
     eyebrow: 'Senior Product Marketing Manager | Enterprise Experience Intelligence',
     company: 'Qualtrics',
     description:
-      "At Qualtrics, I owned product marketing for Voice of Customer, and led segment strategy for low-maturity and mid-market customers within their Customer Experience product suite. I built a structured ICP framework for the mid-market segment, one that didn't exist before, informed by customer and market interviews, win-loss analysis, and feedback loops across sales and field teams. I led competitive intelligence for mid-market and built scalable systems and templates that optimized the cross-functional product-launch process for multi-feature launches. I was the lead PMM on the company's largest Customer Experience launch of the year, coordinating with Product and downstream GTM teams and translating in-flight product strategy into training material used across the org.",
+      "At Qualtrics, I owned product marketing for Voice of Customer, and led segment strategy for low-maturity and mid-market customers within their Customer Experience product suite. I built a structured ICP framework for the mid-market segment, informed by customer and market interviews, win-loss analysis, and feedback loops across sales and field teams. I led competitive intelligence for mid-market and built scalable systems and templates that optimized the cross-functional product-launch process for multi-feature launches. I was the lead PMM on the company's largest Customer Experience launch of the year, coordinating with Product and downstream GTM teams and translating in-flight product strategy into training material used across the org.",
     quote:
-      '"Dani is one of the most AI-literate people I\'ve worked with... her curiosity, tenacity, and desire to build is infectious, and makes others want to level up alongside her."',
-    quoteName: 'Arielle Jendruh',
-    quoteTitle: 'Market Intelligence Leader, Qualtrics',
+      '"She is never afraid to ask the hard question, challenge conventional thinking, or dig several layers deeper to understand the product, customer, or problem."',
+    quoteName: 'Nicole Caven',
+    quoteTitle: 'Senior Product Marketing & Go-to-Market Leader, Qualtrics',
     image: '/screenshots/qualtrics-web.png',
     imageAlt: 'Qualtrics platform',
   },
