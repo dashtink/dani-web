@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar'
 import { Testimonials } from '@/components/testimonials'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Writing } from '@/components/writing'
+import { Projects } from '@/components/projects'
 import { Button } from '@/components/button'
 
 // Stat bar hidden for now -- restore this array and the grid below in Hero to bring it back.
@@ -318,7 +319,7 @@ export default function Home() {
         <WorkHighlights />
         <Testimonials />
         <Writing />
-        {/* Projects section hidden until real project pages are ready */}
+        <Projects />
       </main>
       <Footer />
     </div>

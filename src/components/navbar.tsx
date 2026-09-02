@@ -16,6 +16,7 @@ const links = [
   { href: '#what-i-care-about', label: 'principles' },
   { href: '#writing', label: 'writing & speaking' },
   { href: '#testimonials', label: 'testimonials' },
+  { href: '#projects', label: 'projects' },
 ]
 
 function DesktopNav() {

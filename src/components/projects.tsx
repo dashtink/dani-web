@@ -6,25 +6,31 @@ const thumbGradients = [
 
 const projects = [
   {
-    id: 'placeholder-1',
-    name: 'Project name TBD',
+    id: 'contextos',
+    name: 'ContextOS',
     description:
-      'A short description of what this project is and why I built it will go here.',
-    href: 'https://github.com/dashtink',
+      'A persistent-memory system that turns Claude into a chief of staff across sessions — a plain-text vault plus behavior rituals so context survives between conversations instead of getting re-explained every time.',
+    href: 'https://github.com/dashtink/contextos',
+    tag: 'GITHUB',
+    cta: 'View on GitHub',
   },
   {
-    id: 'placeholder-2',
-    name: 'Project name TBD',
+    id: 'dogear',
+    name: 'DogEar',
     description:
-      'A short description of what this project is and why I built it will go here.',
-    href: 'https://github.com/dashtink',
+      'A self-hosted personal library catalog — scan ISBNs to add books, track which shelf they live on, and manage lending, all running on your own server.',
+    href: 'https://github.com/dashtink/dogear',
+    tag: 'GITHUB',
+    cta: 'View on GitHub',
   },
   {
-    id: 'placeholder-3',
-    name: 'Project name TBD',
+    id: 'status-food',
+    name: 'Status.Food',
     description:
-      'A short description of what this project is and why I built it will go here.',
-    href: 'https://github.com/dashtink',
+      'A live tracker for FDA and USDA food recalls, organized by risk level and category so you can quickly check whether something in your fridge was recalled.',
+    href: 'https://statusdotfood-z7f9.vercel.app/',
+    tag: 'LIVE',
+    cta: 'View Project',
   },
 ]
 
@@ -39,8 +45,7 @@ export function Projects() {
           </p>
           <p className="mt-4 text-lg/8 text-text-secondary">
             Side projects and experiments, mostly things I built to scratch
-            an itch or learn something new. This section is a work in
-            progress — check back for real ones soon.
+            an itch or learn something new.
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -62,7 +67,7 @@ export function Projects() {
               <div className="flex flex-1 flex-col justify-between p-6">
                 <div>
                   <span className="inline-block rounded border border-[rgba(78,207,108,0.35)] px-2.5 py-[3px] font-mono text-[11px] font-medium text-accent-green">
-                    PLACEHOLDER
+                    {project.tag}
                   </span>
                   <h3 className="mt-3.5 text-[17px] font-semibold text-text-primary">
                     {project.name}
@@ -72,7 +77,7 @@ export function Projects() {
                   </p>
                 </div>
                 <p className="mt-4 text-[13.5px] font-semibold text-text-quote">
-                  View on GitHub →
+                  {project.cta} →
                 </p>
               </div>
             </a>
